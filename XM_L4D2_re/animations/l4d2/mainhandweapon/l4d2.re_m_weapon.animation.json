@@ -1,0 +1,12 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.l4d2.re_reload_click": {
+      "animation_length": 0.05,
+			"loop": "hold_on_last_frame",
+      "timeline": {
+        "0.0": ""
+      }
+    }
+  }
+}

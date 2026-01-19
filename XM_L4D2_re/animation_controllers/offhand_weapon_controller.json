@@ -1,0 +1,1166 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.l4d2.deagle_controller": {
+      "initial_state": "holding",
+      "states": {
+        "holding": {
+          "animations": [
+            "deagle_holding"
+          ],
+          "transitions": [
+            {
+              "reloading": "q.property('l4d2:reloading') == 1"
+            },
+            {
+              "shoot": "q.property('l4d2:o_ammo') > 0 && q.is_using_item"
+            },
+            {
+              "pushing": "q.property('l4d2:push') == 1"
+            }
+          ]
+        },
+        "reloading": {
+          "animations": [
+            "deagle_reloading"
+          ],
+          "transitions": [
+            {
+              "holding": "q.property('l4d2:reloading') == 0"
+            }
+          ]
+        },
+        "shoot": {
+          "animations": [
+            "deagle_shoot"
+          ],
+          "transitions": [
+            {
+              "holding": "q.any_animation_finished && !q.is_using_item"
+            }
+          ]
+        },
+        "pushing": {
+          "animations": [
+            "deagle_pushing"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.l4d2.two_pistol_controller": {
+      "initial_state": "holding",
+      "states": {
+        "holding": {
+          "animations": [
+            "two_pistol_holding"
+          ],
+          "transitions": [
+            {
+              "reloading": "q.property('l4d2:reloading') == 1"
+            },
+            {
+              "shoot_right": "q.property('l4d2:o_ammo') > 0 && q.is_using_item && v.two_pistol_shoot == 1"
+            },
+            {
+              "shoot_left": "q.property('l4d2:o_ammo') > 0 && q.is_using_item && v.two_pistol_shoot == 2"
+            },
+            {
+              "pushing": "q.property('l4d2:push') == 1"
+            }
+          ]
+        },
+        "reloading": {
+          "animations": [
+            "two_pistol_reloading"
+          ],
+          "transitions": [
+            {
+              "holding": "q.property('l4d2:reloading') == 0"
+            }
+          ]
+        },
+        "shoot_right": {
+          "animations": [
+            "two_pistol_shoot_right"
+          ],
+          "on_exit": [
+            "v.two_pistol_shoot = 2;"
+          ],
+          "transitions": [
+            {
+              "holding": "q.any_animation_finished && !q.is_using_item"
+            }
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "shoot_left": {
+          "animations": [
+            "two_pistol_shoot_left"
+          ],
+          "on_exit": [
+            "v.two_pistol_shoot = 1;"
+          ],
+          "transitions": [
+            {
+              "holding": "q.any_animation_finished && !q.is_using_item"
+            }
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "pushing": {
+          "animations": [
+            "two_pistol_pushing"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.l4d2.pistol_controller": {
+      "initial_state": "holding",
+      "states": {
+        "holding": {
+          "animations": [
+            "pistol_holding"
+          ],
+          "transitions": [
+            {
+              "reloading": "q.property('l4d2:reloading') == 1"
+            },
+            {
+              "shoot": "q.property('l4d2:m_weapon_using')"
+            },
+            {
+              "pushing": "q.property('l4d2:push') == 1"
+            }
+          ]
+        },
+        "reloading": {
+          "animations": [
+            "pistol_reloading"
+          ],
+          "transitions": [
+            {
+              "holding": "q.property('l4d2:reloading') == 0"
+            }
+          ]
+        },
+        "shoot": {
+          "animations": [
+            "pistol_shoot"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ],
+          "blend_transition": 0.5,
+          "blend_via_shortest_path": true
+        },
+        "pushing": {
+          "animations": [
+            "pistol_pushing"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.l4d2.shovel_controller": {
+      "initial_state": "holding",
+      "states": {
+        "holding": {
+          "animations": [
+            "shovel_holding"
+          ],
+          "transitions": [
+            {
+              "attack_1": "q.property('l4d2:melee_weapon_attack') == 1"
+            },
+            {
+              "attack_2": "q.property('l4d2:melee_weapon_attack') == 2"
+            },
+            {
+              "attack_3": "q.property('l4d2:melee_weapon_attack') == 3"
+            },
+            {
+              "pushing": "q.property('l4d2:push') == 1"
+            }
+          ]
+        },
+        "attack_1": {
+          "animations": [
+            "shovel_attack_1"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "attack_2": {
+          "animations": [
+            "shovel_attack_2"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "attack_3": {
+          "animations": [
+            "shovel_attack_3"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "pushing": {
+          "animations": [
+            "shovel_pushing"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.l4d2.riot_shield_controller": {
+      "initial_state": "holding",
+      "states": {
+        "holding": {
+          "animations": [
+            "riot_shield_holding"
+          ],
+          "transitions": [
+            {
+              "attack_1": "q.property('l4d2:melee_weapon_attack') == 1"
+            },
+            {
+              "attack_2": "q.property('l4d2:melee_weapon_attack') == 2"
+            },
+            {
+              "attack_3": "q.property('l4d2:melee_weapon_attack') == 3"
+            },
+            {
+              "pushing": "q.property('l4d2:push') == 1"
+            }
+          ]
+        },
+        "attack_1": {
+          "animations": [
+            "riot_shield_attack_1"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "attack_2": {
+          "animations": [
+            "riot_shield_attack_2"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "attack_3": {
+          "animations": [
+            "riot_shield_attack_3"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "pushing": {
+          "animations": [
+            "riot_shield_pushing"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.l4d2.pitchfork_controller": {
+      "initial_state": "holding",
+      "states": {
+        "holding": {
+          "animations": [
+            "pitchfork_holding"
+          ],
+          "transitions": [
+            {
+              "attack_1": "q.property('l4d2:melee_weapon_attack') == 1"
+            },
+            {
+              "attack_2": "q.property('l4d2:melee_weapon_attack') == 2"
+            },
+            {
+              "attack_3": "q.property('l4d2:melee_weapon_attack') == 3"
+            },
+            {
+              "pushing": "q.property('l4d2:push') == 1"
+            }
+          ]
+        },
+        "attack_1": {
+          "animations": [
+            "pitchfork_attack_1"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "attack_2": {
+          "animations": [
+            "pitchfork_attack_2"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "attack_3": {
+          "animations": [
+            "pitchfork_attack_3"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "pushing": {
+          "animations": [
+            "pitchfork_pushing"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.l4d2.nightstick_controller": {
+      "initial_state": "holding",
+      "states": {
+        "holding": {
+          "animations": [
+            "nightstick_holding"
+          ],
+          "transitions": [
+            {
+              "attack_1": "q.property('l4d2:melee_weapon_attack') == 1"
+            },
+            {
+              "attack_2": "q.property('l4d2:melee_weapon_attack') == 2"
+            },
+            {
+              "attack_3": "q.property('l4d2:melee_weapon_attack') == 3"
+            },
+            {
+              "pushing": "q.property('l4d2:push') == 1"
+            }
+          ]
+        },
+        "attack_1": {
+          "animations": [
+            "nightstick_attack_1"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "attack_2": {
+          "animations": [
+            "nightstick_attack_2"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "attack_3": {
+          "animations": [
+            "nightstick_attack_3"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "pushing": {
+          "animations": [
+            "nightstick_pushing"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.l4d2.machete_controller": {
+      "initial_state": "holding",
+      "states": {
+        "holding": {
+          "animations": [
+            "machete_holding"
+          ],
+          "transitions": [
+            {
+              "attack_1": "q.property('l4d2:melee_weapon_attack') == 1"
+            },
+            {
+              "attack_2": "q.property('l4d2:melee_weapon_attack') == 2"
+            },
+            {
+              "attack_3": "q.property('l4d2:melee_weapon_attack') == 3"
+            },
+            {
+              "pushing": "q.property('l4d2:push') == 1"
+            }
+          ]
+        },
+        "attack_1": {
+          "animations": [
+            "machete_attack_1"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "attack_2": {
+          "animations": [
+            "machete_attack_2"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "attack_3": {
+          "animations": [
+            "machete_attack_3"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "pushing": {
+          "animations": [
+            "machete_pushing"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.l4d2.knife_controller": {
+      "initial_state": "holding",
+      "states": {
+        "holding": {
+          "animations": [
+            "knife_holding"
+          ],
+          "transitions": [
+            {
+              "attack_1": "q.property('l4d2:melee_weapon_attack') == 1"
+            },
+            {
+              "attack_2": "q.property('l4d2:melee_weapon_attack') == 2"
+            },
+            {
+              "attack_3": "q.property('l4d2:melee_weapon_attack') == 3"
+            },
+            {
+              "pushing": "q.property('l4d2:push') == 1"
+            }
+          ]
+        },
+        "attack_1": {
+          "animations": [
+            "knife_attack_1"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "attack_2": {
+          "animations": [
+            "knife_attack_2"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "attack_3": {
+          "animations": [
+            "knife_attack_3"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "pushing": {
+          "animations": [
+            "knife_pushing"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.l4d2.katana_controller": {
+      "initial_state": "holding",
+      "states": {
+        "holding": {
+          "animations": [
+            "katana_holding"
+          ],
+          "transitions": [
+            {
+              "attack_1": "q.property('l4d2:melee_weapon_attack') == 1"
+            },
+            {
+              "attack_2": "q.property('l4d2:melee_weapon_attack') == 2"
+            },
+            {
+              "attack_3": "q.property('l4d2:melee_weapon_attack') == 3"
+            },
+            {
+              "pushing": "q.property('l4d2:push') == 1"
+            }
+          ]
+        },
+        "attack_1": {
+          "animations": [
+            "katana_attack_1"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "attack_2": {
+          "animations": [
+            "katana_attack_2"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "attack_3": {
+          "animations": [
+            "katana_attack_3"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "pushing": {
+          "animations": [
+            "katana_pushing"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.l4d2.golf_club_controller": {
+      "initial_state": "holding",
+      "states": {
+        "holding": {
+          "animations": [
+            "golf_club_holding"
+          ],
+          "transitions": [
+            {
+              "attack_1": "q.property('l4d2:melee_weapon_attack') == 1"
+            },
+            {
+              "attack_2": "q.property('l4d2:melee_weapon_attack') == 2"
+            },
+            {
+              "attack_3": "q.property('l4d2:melee_weapon_attack') == 3"
+            },
+            {
+              "pushing": "q.property('l4d2:push') == 1"
+            }
+          ]
+        },
+        "attack_1": {
+          "animations": [
+            "golf_club_attack_1"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "attack_2": {
+          "animations": [
+            "golf_club_attack_2"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "attack_3": {
+          "animations": [
+            "golf_club_attack_3"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "pushing": {
+          "animations": [
+            "golf_club_pushing"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.l4d2.frying_pan_controller": {
+      "initial_state": "holding",
+      "states": {
+        "holding": {
+          "animations": [
+            "frying_pan_holding"
+          ],
+          "transitions": [
+            {
+              "attack_1": "q.property('l4d2:melee_weapon_attack') == 1"
+            },
+            {
+              "attack_2": "q.property('l4d2:melee_weapon_attack') == 2"
+            },
+            {
+              "attack_3": "q.property('l4d2:melee_weapon_attack') == 3"
+            },
+            {
+              "pushing": "q.property('l4d2:push') == 1"
+            }
+          ]
+        },
+        "attack_1": {
+          "animations": [
+            "frying_pan_attack_1"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "attack_2": {
+          "animations": [
+            "frying_pan_attack_2"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "attack_3": {
+          "animations": [
+            "frying_pan_attack_3"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "pushing": {
+          "animations": [
+            "frying_pan_pushing"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.l4d2.fireaxe_controller": {
+      "initial_state": "holding",
+      "states": {
+        "holding": {
+          "animations": [
+            "fireaxe_holding"
+          ],
+          "transitions": [
+            {
+              "attack_1": "q.property('l4d2:melee_weapon_attack') == 1"
+            },
+            {
+              "attack_2": "q.property('l4d2:melee_weapon_attack') == 2"
+            },
+            {
+              "attack_3": "q.property('l4d2:melee_weapon_attack') == 3"
+            },
+            {
+              "pushing": "q.property('l4d2:push') == 1"
+            }
+          ]
+        },
+        "attack_1": {
+          "animations": [
+            "fireaxe_attack_1"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "attack_2": {
+          "animations": [
+            "fireaxe_attack_2"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "attack_3": {
+          "animations": [
+            "fireaxe_attack_3"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "pushing": {
+          "animations": [
+            "fireaxe_pushing"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.l4d2.electric_guitar_controller": {
+      "initial_state": "holding",
+      "states": {
+        "holding": {
+          "animations": [
+            "electric_guitar_holding"
+          ],
+          "transitions": [
+            {
+              "attack_1": "q.property('l4d2:melee_weapon_attack') == 1"
+            },
+            {
+              "attack_2": "q.property('l4d2:melee_weapon_attack') == 2"
+            },
+            {
+              "attack_3": "q.property('l4d2:melee_weapon_attack') == 3"
+            },
+            {
+              "pushing": "q.property('l4d2:push') == 1"
+            }
+          ]
+        },
+        "attack_1": {
+          "animations": [
+            "electric_guitar_attack_1"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "attack_2": {
+          "animations": [
+            "electric_guitar_attack_2"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "attack_3": {
+          "animations": [
+            "electric_guitar_attack_3"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "pushing": {
+          "animations": [
+            "electric_guitar_pushing"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.l4d2.crowbar_controller": {
+      "initial_state": "holding",
+      "states": {
+        "holding": {
+          "animations": [
+            "crowbar_holding"
+          ],
+          "transitions": [
+            {
+              "attack_1": "q.property('l4d2:melee_weapon_attack') == 1"
+            },
+            {
+              "attack_2": "q.property('l4d2:melee_weapon_attack') == 2"
+            },
+            {
+              "attack_3": "q.property('l4d2:melee_weapon_attack') == 3"
+            },
+            {
+              "pushing": "q.property('l4d2:push') == 1"
+            }
+          ]
+        },
+        "attack_1": {
+          "animations": [
+            "crowbar_attack_1"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "attack_2": {
+          "animations": [
+            "crowbar_attack_2"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "attack_3": {
+          "animations": [
+            "crowbar_attack_3"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "pushing": {
+          "animations": [
+            "crowbar_pushing"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.l4d2.cricket_bat_controller": {
+      "initial_state": "holding",
+      "states": {
+        "holding": {
+          "animations": [
+            "cricket_bat_holding"
+          ],
+          "transitions": [
+            {
+              "attack_1": "q.property('l4d2:melee_weapon_attack') == 1"
+            },
+            {
+              "attack_2": "q.property('l4d2:melee_weapon_attack') == 2"
+            },
+            {
+              "attack_3": "q.property('l4d2:melee_weapon_attack') == 3"
+            },
+            {
+              "pushing": "q.property('l4d2:push') == 1"
+            }
+          ]
+        },
+        "attack_1": {
+          "animations": [
+            "cricket_bat_attack_1"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "attack_2": {
+          "animations": [
+            "cricket_bat_attack_2"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "attack_3": {
+          "animations": [
+            "cricket_bat_attack_3"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "pushing": {
+          "animations": [
+            "cricket_bat_pushing"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.l4d2.chainsaw_controller": {
+      "initial_state": "start",
+      "states": {
+        "start": {
+          "animations": [
+            "chainsaw_start"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "holding": {
+          "animations": [
+            "chainsaw_idle",
+            "chainsaw_holding"
+          ],
+          "transitions": [
+            {
+              "start": "q.property('l4d2:offhand_weapon_id') != 2"
+            },
+            {
+              "attack_1": "q.property('l4d2:chainsaw_cooldown') == 1"
+            },
+            {
+              "pushing": "q.property('l4d2:push') == 1"
+            }
+          ]
+        },
+        "attack_1": {
+          "animations": [
+            "chainsaw_idle",
+            "chainsaw_attack_1"
+          ],
+          "transitions": [
+            {
+              "start": "q.property('l4d2:offhand_weapon_id') != 2"
+            },
+            {
+              "attack_2": "q.all_animations_finished || q.property('l4d2:chainsaw_cooldown') == 0"
+            }
+          ]
+        },
+        "attack_2": {
+          "animations": [
+            "chainsaw_attack_2"
+          ],
+          "transitions": [
+            {
+              "start": "q.property('l4d2:offhand_weapon_id') != 2"
+            },
+            {
+              "attacked": "q.property('l4d2:chainsaw_cooldown') == 0"
+            }
+          ]
+        },
+        "attacked": {
+          "animations": [
+            "chainsaw_idle",
+            "chainsaw_attack_3"
+          ],
+          "transitions": [
+            {
+              "start": "q.property('l4d2:offhand_weapon_id') != 2"
+            },
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "pushing": {
+          "animations": [
+            "chainsaw_idle",
+            "chainsaw_pushing"
+          ],
+          "transitions": [
+            {
+              "start": "q.property('l4d2:offhand_weapon_id') != 2"
+            },
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.l4d2.baseball_bat_controller": {
+      "initial_state": "holding",
+      "states": {
+        "holding": {
+          "animations": [
+            "baseball_bat_holding"
+          ],
+          "transitions": [
+            {
+              "attack_1": "q.property('l4d2:melee_weapon_attack') == 1"
+            },
+            {
+              "attack_2": "q.property('l4d2:melee_weapon_attack') == 2"
+            },
+            {
+              "attack_3": "q.property('l4d2:melee_weapon_attack') == 3"
+            },
+            {
+              "pushing": "q.property('l4d2:push') == 1"
+            }
+          ]
+        },
+        "attack_1": {
+          "animations": [
+            "baseball_bat_attack_1"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "attack_2": {
+          "animations": [
+            "baseball_bat_attack_2"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "attack_3": {
+          "animations": [
+            "baseball_bat_attack_3"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        },
+        "pushing": {
+          "animations": [
+            "baseball_bat_pushing"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

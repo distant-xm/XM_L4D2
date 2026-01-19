@@ -1,0 +1,152 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.ui_healthbar",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 9,
+				"visible_bounds_height": 6,
+				"visible_bounds_offset": [0, 2, 0]
+			},
+			"bones": [
+				{
+					"name": "ui_all",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "ui_healthbar",
+					"parent": "ui_all",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "ui_healthbar_background",
+					"parent": "ui_healthbar",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-64, 0, 2],
+							"size": [64, 16, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16]}
+							}
+						}
+					]
+				},
+				{
+					"name": "ui_health_heart",
+					"parent": "ui_healthbar",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-51, 8, 0],
+							"size": [4, 4, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16]}
+							}
+						}
+					]
+				},
+				{
+					"name": "ui_survivors",
+					"parent": "ui_healthbar",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-61.5, 3, 0],
+							"size": [9.5, 9.5, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16]}
+							}
+						}
+					]
+				},
+				{
+					"name": "ui_health_black",
+					"parent": "ui_healthbar",
+					"pivot": [-18.7, 4.875, 0],
+					"cubes": [
+						{
+							"origin": [-51.2, 2.625, 0],
+							"size": [32.5, 4.5, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 14.25]}
+							}
+						}
+					]
+				},
+				{
+					"name": "ui_health",
+					"parent": "ui_healthbar",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-51.2, 2.625, 1],
+							"size": [32.5, 4.5, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 14.25]}
+							}
+						}
+					]
+				},
+				{
+					"name": "ui_temporary_hp",
+					"parent": "ui_healthbar",
+					"pivot": [-18.7, 4.875, 0.5],
+					"cubes": [
+						{
+							"origin": [-51.2, 2.625, 0.5],
+							"size": [32.5, 4.5, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [8, 14.25]}
+							}
+						}
+					]
+				},
+				{
+					"name": "ui_health_number_1",
+					"parent": "ui_healthbar",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-41.5, 8.5, 0],
+							"size": [2, 3, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16]}
+							}
+						}
+					]
+				},
+				{
+					"name": "ui_health_number_10",
+					"parent": "ui_healthbar",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-44, 8.5, 0],
+							"size": [2, 3, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16]}
+							}
+						}
+					]
+				},
+				{
+					"name": "ui_health_number_100",
+					"parent": "ui_healthbar",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-46.5, 8.5, 0],
+							"size": [2, 3, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

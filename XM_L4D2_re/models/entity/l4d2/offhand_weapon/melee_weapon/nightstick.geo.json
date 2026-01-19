@@ -1,0 +1,285 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.l4d2.nightstick",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "steve",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body1",
+					"parent": "steve",
+					"pivot": [0, 12, 0],
+					"cubes": [
+						{
+							"origin": [-4, 12, -2],
+							"size": [8, 6, 4],
+							"uv": {
+								"north": {"uv": [16, 16], "uv_size": [0, 0]},
+								"east": {"uv": [16, 16], "uv_size": [0, 0]},
+								"south": {"uv": [16, 16], "uv_size": [0, 0]},
+								"west": {"uv": [16, 16], "uv_size": [0, 0]},
+								"up": {"uv": [16, 16], "uv_size": [0, 0]},
+								"down": {"uv": [16, 16], "uv_size": [0, 0]}
+							}
+						}
+					]
+				},
+				{
+					"name": "body2",
+					"parent": "body1",
+					"pivot": [0, 18, 2],
+					"cubes": [
+						{
+							"origin": [-4, 18, -2],
+							"size": [8, 6, 4],
+							"uv": {
+								"north": {"uv": [16, 16], "uv_size": [0, 0]},
+								"east": {"uv": [16, 16], "uv_size": [0, 0]},
+								"south": {"uv": [16, 16], "uv_size": [0, 0]},
+								"west": {"uv": [16, 16], "uv_size": [0, 0]},
+								"up": {"uv": [16, 16], "uv_size": [0, 0]},
+								"down": {"uv": [16, 16], "uv_size": [0, 0]}
+							}
+						}
+					]
+				},
+				{
+					"name": "head",
+					"parent": "body2",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{
+							"origin": [-4, 24, -4],
+							"size": [8, 8, 8],
+							"uv": {
+								"north": {"uv": [16, 16], "uv_size": [0, 0]},
+								"east": {"uv": [16, 16], "uv_size": [0, 0]},
+								"south": {"uv": [16, 16], "uv_size": [0, 0]},
+								"west": {"uv": [16, 16], "uv_size": [0, 0]},
+								"up": {"uv": [16, 16], "uv_size": [0, 0]},
+								"down": {"uv": [16, 16], "uv_size": [0, 0]}
+							}
+						}
+					]
+				},
+				{
+					"name": "leftarm1",
+					"parent": "body2",
+					"pivot": [5, 22, 0],
+					"cubes": [
+						{
+							"origin": [4, 18, -2],
+							"size": [4, 6, 4],
+							"uv": {
+								"north": {"uv": [16, 16], "uv_size": [0, 0]},
+								"east": {"uv": [16, 16], "uv_size": [0, 0]},
+								"south": {"uv": [16, 16], "uv_size": [0, 0]},
+								"west": {"uv": [16, 16], "uv_size": [0, 0]},
+								"up": {"uv": [16, 16], "uv_size": [0, 0]},
+								"down": {"uv": [16, 16], "uv_size": [0, 0]}
+							}
+						}
+					]
+				},
+				{
+					"name": "leftarm2",
+					"parent": "leftarm1",
+					"pivot": [6, 18, 2],
+					"cubes": [
+						{
+							"origin": [4, 12, -2],
+							"size": [4, 6, 4],
+							"uv": {
+								"north": {"uv": [16, 16], "uv_size": [0, 0]},
+								"east": {"uv": [16, 16], "uv_size": [0, 0]},
+								"south": {"uv": [16, 16], "uv_size": [0, 0]},
+								"west": {"uv": [16, 16], "uv_size": [0, 0]},
+								"up": {"uv": [16, 16], "uv_size": [0, 0]},
+								"down": {"uv": [16, 16], "uv_size": [0, 0]}
+							}
+						}
+					]
+				},
+				{
+					"name": "rightarm1",
+					"parent": "body2",
+					"pivot": [-5, 22, 0],
+					"cubes": [
+						{
+							"origin": [-8, 18, -2],
+							"size": [4, 6, 4],
+							"uv": {
+								"north": {"uv": [16, 16], "uv_size": [0, 0]},
+								"east": {"uv": [16, 16], "uv_size": [0, 0]},
+								"south": {"uv": [16, 16], "uv_size": [0, 0]},
+								"west": {"uv": [16, 16], "uv_size": [0, 0]},
+								"up": {"uv": [16, 16], "uv_size": [0, 0]},
+								"down": {"uv": [16, 16], "uv_size": [0, 0]}
+							}
+						}
+					]
+				},
+				{
+					"name": "rightarm2",
+					"parent": "rightarm1",
+					"pivot": [-6, 18, 2],
+					"cubes": [
+						{
+							"origin": [-8, 12, -2],
+							"size": [4, 6, 4],
+							"uv": {
+								"north": {"uv": [16, 16], "uv_size": [0, 0]},
+								"east": {"uv": [16, 16], "uv_size": [0, 0]},
+								"south": {"uv": [16, 16], "uv_size": [0, 0]},
+								"west": {"uv": [16, 16], "uv_size": [0, 0]},
+								"up": {"uv": [16, 16], "uv_size": [0, 0]},
+								"down": {"uv": [16, 16], "uv_size": [0, 0]}
+							}
+						}
+					]
+				},
+				{
+					"name": "rightArm",
+					"parent": "rightarm2",
+					"pivot": [-6, 18, 2]
+				},
+				{
+					"name": "weapon",
+					"parent": "rightArm",
+					"pivot": [-6, 15, 1]
+				},
+				{
+					"name": "nightstick",
+					"parent": "weapon",
+					"pivot": [-6, 14, 3],
+					"rotation": [90, 0, 0],
+					"binding": "q.item_slot_to_bone_name(c.item_slot)",
+					"cubes": [
+						{
+							"origin": [-6.53359, 14, 2.46641],
+							"size": [1.06717, 17.0748, 1.06718],
+							"uv": {
+								"north": {"uv": [8, 13], "uv_size": [2, 1.5]},
+								"east": {"uv": [8, 14.5], "uv_size": [2, 1.5]},
+								"south": {"uv": [8, 10], "uv_size": [2, 1.5]},
+								"west": {"uv": [8, 11.5], "uv_size": [2, 1.5]},
+								"up": {"uv": [10, 16], "uv_size": [-2, -4.5]},
+								"down": {"uv": [10, 16], "uv_size": [-2, -4.5]}
+							}
+						},
+						{
+							"origin": [-6.53359, 26.09465, 3.53359],
+							"size": [1.06717, 1.06717, 3.85943],
+							"uv": {
+								"north": {"uv": [8, 13], "uv_size": [2, 1.5]},
+								"east": {"uv": [8, 14.5], "uv_size": [2, 1.5]},
+								"south": {"uv": [8, 10], "uv_size": [2, 1.5]},
+								"west": {"uv": [8, 11.5], "uv_size": [2, 1.5]},
+								"up": {"uv": [10, 16], "uv_size": [-2, -4.5]},
+								"down": {"uv": [10, 16], "uv_size": [-2, -4.5]}
+							}
+						},
+						{
+							"origin": [-6.68659, 25.94165, 7.37771],
+							"size": [1.37317, 1.37318, 0.79942],
+							"uv": {
+								"north": {"uv": [8, 13], "uv_size": [2, 1.5]},
+								"east": {"uv": [8, 14.5], "uv_size": [2, 1.5]},
+								"south": {"uv": [8, 10], "uv_size": [2, 1.5]},
+								"west": {"uv": [8, 11.5], "uv_size": [2, 1.5]},
+								"up": {"uv": [10, 16], "uv_size": [-2, -4.5]},
+								"down": {"uv": [10, 16], "uv_size": [-2, -4.5]}
+							}
+						}
+					]
+				},
+				{
+					"name": "leftleg1",
+					"parent": "steve",
+					"pivot": [1.9, 12, 0],
+					"cubes": [
+						{
+							"origin": [-0.1, 6, -2],
+							"size": [4, 6, 4],
+							"uv": {
+								"north": {"uv": [16, 16], "uv_size": [0, 0]},
+								"east": {"uv": [16, 16], "uv_size": [0, 0]},
+								"south": {"uv": [16, 16], "uv_size": [0, 0]},
+								"west": {"uv": [16, 16], "uv_size": [0, 0]},
+								"up": {"uv": [16, 16], "uv_size": [0, 0]},
+								"down": {"uv": [16, 16], "uv_size": [0, 0]}
+							}
+						}
+					]
+				},
+				{
+					"name": "leftleg2",
+					"parent": "leftleg1",
+					"pivot": [1.95, 6, -2],
+					"cubes": [
+						{
+							"origin": [-0.1, 0, -2],
+							"size": [4, 6, 4],
+							"uv": {
+								"north": {"uv": [16, 16], "uv_size": [0, 0]},
+								"east": {"uv": [16, 16], "uv_size": [0, 0]},
+								"south": {"uv": [16, 16], "uv_size": [0, 0]},
+								"west": {"uv": [16, 16], "uv_size": [0, 0]},
+								"up": {"uv": [16, 16], "uv_size": [0, 0]},
+								"down": {"uv": [16, 16], "uv_size": [0, 0]}
+							}
+						}
+					]
+				},
+				{
+					"name": "rightleg1",
+					"parent": "steve",
+					"pivot": [-1.9, 12, 0],
+					"cubes": [
+						{
+							"origin": [-3.9, 6, -2],
+							"size": [4, 6, 4],
+							"uv": {
+								"north": {"uv": [16, 16], "uv_size": [0, 0]},
+								"east": {"uv": [16, 16], "uv_size": [0, 0]},
+								"south": {"uv": [16, 16], "uv_size": [0, 0]},
+								"west": {"uv": [16, 16], "uv_size": [0, 0]},
+								"up": {"uv": [16, 16], "uv_size": [0, 0]},
+								"down": {"uv": [16, 16], "uv_size": [0, 0]}
+							}
+						}
+					]
+				},
+				{
+					"name": "rightleg2",
+					"parent": "rightleg1",
+					"pivot": [-1.9, 6, -2],
+					"cubes": [
+						{
+							"origin": [-3.9, 0, -2],
+							"size": [4, 6, 4],
+							"uv": {
+								"north": {"uv": [16, 16], "uv_size": [0, 0]},
+								"east": {"uv": [16, 16], "uv_size": [0, 0]},
+								"south": {"uv": [16, 16], "uv_size": [0, 0]},
+								"west": {"uv": [16, 16], "uv_size": [0, 0]},
+								"up": {"uv": [16, 16], "uv_size": [0, 0]},
+								"down": {"uv": [16, 16], "uv_size": [0, 0]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

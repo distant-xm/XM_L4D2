@@ -1,0 +1,818 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.l4d2_ui": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"ui_position_controller",
+						"ui_ammo_controller",
+						"ui_mainhand_weapon_controller",
+						"ui_offhand_weapon_controller",
+						"ui_throws_controller",
+						"ui_firstaidkit_controller",
+						"ui_medicines_controller"
+					]
+				}
+			}
+		},
+		"controller.animation.l4d2.ui_temporary_hp": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"temporary_hp_check": "v.temporary_hp = (q.health / q.max_health); return q.property('l4d2:temporary_hp_has');"
+						}
+					]
+				},
+				"temporary_hp_check": {
+					"transitions": [
+						{
+							"temporary_hp_not": "!q.property('l4d2:temporary_hp_has')"
+						}
+					]
+				},
+				"temporary_hp_not": {
+					"transitions": [
+						{
+							"default": "(1.0)"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.l4d2.ui_position_controller": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"ui_position",
+						{
+							"ui_position_ride": "q.is_riding"
+						},
+						{
+							"ui_position_swim": "q.is_swimming || q.is_crawling"
+						},
+						{
+							"ui_position_glide": "q.is_gliding"
+						}
+					]
+				}
+			}
+		},
+
+
+
+		
+		"controller.animation.l4d2.ui_ammo_controller": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"on_entry": [
+						"v.ui_ammo = 0;"
+					],
+					"transitions": [
+						{
+							"check": "(1.0)"
+						}
+					]
+				},
+				"check": {
+					"on_entry": [
+						"v.ui_ammo = 0;"
+					],
+					"transitions": [
+						{
+							"rifle": "q.is_item_name_any('slot.hotbar', 0, 'l4d2:ak47', 'l4d2:awp')"
+						},
+						{
+							"shot": "q.is_item_name_any('slot.hotbar', 0, 'l4d2:shotgun_spas')"
+						},
+						{
+							"grenade": "q.is_item_name_any('slot.hotbar', 0, 'l4d2:grenade_launcher')"
+						}
+					]
+				},
+				"rifle": {
+					"on_entry": [
+						"v.ui_ammo = 1;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 0, 'l4d2:ak47')"
+						}
+					]
+				},
+				"shot": {
+					"on_entry": [
+						"v.ui_ammo = 2;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 0, 'l4d2:shotgun_spas')"
+						}
+					]
+				},
+				"grenade": {
+					"on_entry": [
+						"v.ui_ammo = 3;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 0, 'l4d2:grenade_launcher')"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.l4d2.ui_mainhand_weapon_controller": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"on_entry": [
+						"v.l4d2_mainhand_weapon = 0;"
+					],
+					"transitions": [
+						{
+							"check": "(1.0)"
+						}
+					]
+				},
+				"check": {
+					"on_entry": [
+						"v.l4d2_mainhand_weapon = 0;"
+					],
+					"transitions": [
+						{
+							"ak47": "q.is_item_name_any('slot.hotbar', 0, 'l4d2:ak47')"
+						},
+						{
+							"awp": "q.is_item_name_any('slot.hotbar', 0, 'l4d2:awp')"
+						},
+						{
+							"g3sg1": "q.is_item_name_any('slot.hotbar', 0, 'l4d2:g3sg1')"
+						},
+						{
+							"grenade_launcher": "q.is_item_name_any('slot.hotbar', 0, 'l4d2:grenade_launcher')"
+						},
+						{
+							"m16": "q.is_item_name_any('slot.hotbar', 0, 'l4d2:m16')"
+						},
+						{
+							"m60": "q.is_item_name_any('slot.hotbar', 0, 'l4d2:m60')"
+						},
+						{
+							"mac_10": "q.is_item_name_any('slot.hotbar', 0, 'l4d2:mac_10')"
+						},
+						{
+							"mini_14": "q.is_item_name_any('slot.hotbar', 0, 'l4d2:mini_14')"
+						},
+						{
+							"mp5": "q.is_item_name_any('slot.hotbar', 0, 'l4d2:mp5')"
+						},
+						{
+							"scar": "q.is_item_name_any('slot.hotbar', 0, 'l4d2:scar')"
+						},
+						{
+							"scout": "q.is_item_name_any('slot.hotbar', 0, 'l4d2:scout')"
+						},
+						{
+							"sg552": "q.is_item_name_any('slot.hotbar', 0, 'l4d2:sg552')"
+						},
+						{
+							"shotgun_m37": "q.is_item_name_any('slot.hotbar', 0, 'l4d2:shotgun_m37')"
+						},
+						{
+							"shotgun_m870": "q.is_item_name_any('slot.hotbar', 0, 'l4d2:shotgun_m870')"
+						},
+						{
+							"shotgun_m1014": "q.is_item_name_any('slot.hotbar', 0, 'l4d2:shotgun_m1014')"
+						},
+						{
+							"shotgun_spas": "q.is_item_name_any('slot.hotbar', 0, 'l4d2:shotgun_spas')"
+						},
+						{
+							"uzi": "q.is_item_name_any('slot.hotbar', 0, 'l4d2:uzi')"
+						}
+					]
+				},
+				"ak47": {
+					"on_entry": [
+						"v.l4d2_mainhand_weapon = 1;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 0, 'l4d2:ak47')"
+						}
+					]
+				},
+				"awp": {
+					"on_entry": [
+						"v.l4d2_mainhand_weapon = 2;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 0, 'l4d2:awp')"
+						}
+					]
+				},
+				"g3sg1": {
+					"on_entry": [
+						"v.l4d2_mainhand_weapon = 3;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 0, 'l4d2:g3sg1')"
+						}
+					]
+				},
+				"grenade_launcher": {
+					"on_entry": [
+						"v.l4d2_mainhand_weapon = 4;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 0, 'l4d2:grenade_launcher')"
+						}
+					]
+				},
+				"m16": {
+					"on_entry": [
+						"v.l4d2_mainhand_weapon = 5;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 0, 'l4d2:m16')"
+						}
+					]
+				},
+				"m60": {
+					"on_entry": [
+						"v.l4d2_mainhand_weapon = 6;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 0, 'l4d2:m60')"
+						}
+					]
+				},
+				"mac_10": {
+					"on_entry": [
+						"v.l4d2_mainhand_weapon = 7;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 0, 'l4d2:mac_10')"
+						}
+					]
+				},
+				"mini_14": {
+					"on_entry": [
+						"v.l4d2_mainhand_weapon = 8;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 0, 'l4d2:mini_14')"
+						}
+					]
+				},
+				"mp5": {
+					"on_entry": [
+						"v.l4d2_mainhand_weapon = 9;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 0, 'l4d2:mp5')"
+						}
+					]
+				},
+				"scar": {
+					"on_entry": [
+						"v.l4d2_mainhand_weapon = 10;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 0, 'l4d2:scar')"
+						}
+					]
+				},
+				"scout": {
+					"on_entry": [
+						"v.l4d2_mainhand_weapon = 11;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 0, 'l4d2:scout')"
+						}
+					]
+				},
+				"sg552": {
+					"on_entry": [
+						"v.l4d2_mainhand_weapon = 12;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 0, 'l4d2:sg552')"
+						}
+					]
+				},
+				"shotgun_m37": {
+					"on_entry": [
+						"v.l4d2_mainhand_weapon = 13;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 0, 'l4d2:shotgun_m37')"
+						}
+					]
+				},
+				"shotgun_m870": {
+					"on_entry": [
+						"v.l4d2_mainhand_weapon = 14;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 0, 'l4d2:shotgun_m870')"
+						}
+					]
+				},
+				"shotgun_m1014": {
+					"on_entry": [
+						"v.l4d2_mainhand_weapon = 15;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 0, 'l4d2:shotgun_m1014')"
+						}
+					]
+				},
+				"shotgun_spas": {
+					"on_entry": [
+						"v.l4d2_mainhand_weapon = 16;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 0, 'l4d2:shotgun_spas')"
+						}
+					]
+				},
+				"uzi": {
+					"on_entry": [
+						"v.l4d2_mainhand_weapon = 17;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 0, 'l4d2:uzi')"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.l4d2.ui_offhand_weapon_controller": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"on_entry": [
+						"v.l4d2_offhand_weapon = 0;",
+						"v.is_pistol = 0;"
+					],
+					"transitions": [
+						{
+							"check": "(1.0)"
+						}
+					]
+				},
+				"check": {
+					"on_entry": [
+						"v.l4d2_offhand_weapon = 0;",
+						"v.is_pistol = 0;"
+					],
+					"transitions": [
+						{
+							"baseball_bat": "q.is_item_name_any('slot.hotbar', 1, 'l4d2:baseball_bat')"
+						},
+						{
+							"chainsaw": "q.is_item_name_any('slot.hotbar', 1, 'l4d2:chainsaw')"
+						},
+						{
+							"cricket_bat": "q.is_item_name_any('slot.hotbar', 1, 'l4d2:cricket_bat')"
+						},
+						{
+							"crowbar": "q.is_item_name_any('slot.hotbar', 1, 'l4d2:crowbar')"
+						},
+						{
+							"electric_guitar": "q.is_item_name_any('slot.hotbar', 1, 'l4d2:electric_guitar')"
+						},
+						{
+							"fireaxe": "q.is_item_name_any('slot.hotbar', 1, 'l4d2:fireaxe')"
+						},
+						{
+							"frying_pan": "q.is_item_name_any('slot.hotbar', 1, 'l4d2:frying_pan')"
+						},
+						{
+							"golf_club": "q.is_item_name_any('slot.hotbar', 1, 'l4d2:golf_club')"
+						},
+						{
+							"katana": "q.is_item_name_any('slot.hotbar', 1, 'l4d2:katana')"
+						},
+						{
+							"knife": "q.is_item_name_any('slot.hotbar', 1, 'l4d2:knife')"
+						},
+						{
+							"machete": "q.is_item_name_any('slot.hotbar', 1, 'l4d2:machete')"
+						},
+						{
+							"nightstick": "q.is_item_name_any('slot.hotbar', 1, 'l4d2:nightstick')"
+						},
+						{
+							"pitchfork": "q.is_item_name_any('slot.hotbar', 1, 'l4d2:pitchfork')"
+						},
+						{
+							"riot_shield": "q.is_item_name_any('slot.hotbar', 1, 'l4d2:riot_shield')"
+						},
+						{
+							"shovel": "q.is_item_name_any('slot.hotbar', 1, 'l4d2:shovel')"
+						},
+						{
+							"deagle": "q.is_item_name_any('slot.hotbar', 1, 'l4d2:deagle')"
+						},
+						{
+							"pistol": "q.is_item_name_any('slot.hotbar', 1, 'l4d2:pistol')"
+						},
+						{
+							"two_pistol": "q.is_item_name_any('slot.hotbar', 1, 'l4d2:two_pistol')"
+						}
+					]
+				},
+				"baseball_bat": {
+					"on_entry": [
+						"v.l4d2_offhand_weapon = 1;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 1, 'l4d2:baseball_bat')"
+						}
+					]
+				},
+				"chainsaw": {
+					"on_entry": [
+						"v.l4d2_offhand_weapon = 2;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 1, 'l4d2:chainsaw')"
+						}
+					]
+				},
+				"cricket_bat": {
+					"on_entry": [
+						"v.l4d2_offhand_weapon = 3;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 1, 'l4d2:cricket_bat')"
+						}
+					]
+				},
+				"crowbar": {
+					"on_entry": [
+						"v.l4d2_offhand_weapon = 4;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 1, 'l4d2:crowbar')"
+						}
+					]
+				},
+				"electric_guitar": {
+					"on_entry": [
+						"v.l4d2_offhand_weapon = 5;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 1, 'l4d2:electric_guitar')"
+						}
+					]
+				},
+				"fireaxe": {
+					"on_entry": [
+						"v.l4d2_offhand_weapon = 6;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 1, 'l4d2:fireaxe')"
+						}
+					]
+				},
+				"frying_pan": {
+					"on_entry": [
+						"v.l4d2_offhand_weapon = 7;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 1, 'l4d2:frying_pan')"
+						}
+					]
+				},
+				"golf_club": {
+					"on_entry": [
+						"v.l4d2_offhand_weapon = 8;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 1, 'l4d2:golf_club')"
+						}
+					]
+				},
+				"katana": {
+					"on_entry": [
+						"v.l4d2_offhand_weapon = 9;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 1, 'l4d2:katana')"
+						}
+					]
+				},
+				"knife": {
+					"on_entry": [
+						"v.l4d2_offhand_weapon = 10;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 1, 'l4d2:knife')"
+						}
+					]
+				},
+				"machete": {
+					"on_entry": [
+						"v.l4d2_offhand_weapon = 11;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 1, 'l4d2:machete')"
+						}
+					]
+				},
+				"nightstick": {
+					"on_entry": [
+						"v.l4d2_offhand_weapon = 12;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 1, 'l4d2:nightstick')"
+						}
+					]
+				},
+				"pitchfork": {
+					"on_entry": [
+						"v.l4d2_offhand_weapon = 13;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 1, 'l4d2:pitchfork')"
+						}
+					]
+				},
+				"riot_shield": {
+					"on_entry": [
+						"v.l4d2_offhand_weapon = 14;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 1, 'l4d2:riot_shield')"
+						}
+					]
+				},
+				"shovel": {
+					"on_entry": [
+						"v.l4d2_offhand_weapon = 15;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 1, 'l4d2:shovel')"
+						}
+					]
+				},
+				"deagle": {
+					"on_entry": [
+						"v.l4d2_offhand_weapon = 16;",
+						"v.is_pistol = 1;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 1, 'l4d2:deagle')"
+						}
+					]
+				},
+				"pistol": {
+					"on_entry": [
+						"v.l4d2_offhand_weapon = 17;",
+						"v.is_pistol = 1;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 1, 'l4d2:pistol')"
+						}
+					]
+				},
+				"two_pistol": {
+					"on_entry": [
+						"v.l4d2_offhand_weapon = 18;",
+						"v.is_pistol = 1;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 1, 'l4d2:two_pistol')"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.l4d2.ui_throws_controller": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"on_entry": [
+						"v.l4d2_throws = 0;"
+					],
+					"transitions": [
+						{
+							"check": "(1.0)"
+						}
+					]
+				},
+				"check": {
+					"on_entry": [
+						"v.l4d2_throws = 0;"
+					],
+					"transitions": [
+						{
+							"boomer_bile": "q.is_item_name_any('slot.hotbar', 2, 'l4d2:boomer_bile')"
+						},
+						{
+							"molotov": "q.is_item_name_any('slot.hotbar', 2, 'l4d2:molotov')"
+						},
+						{
+							"pipe_bomb": "q.is_item_name_any('slot.hotbar', 2, 'l4d2:pipe_bomb')"
+						}
+					]
+				},
+				"boomer_bile": {
+					"on_entry": [
+						"v.l4d2_throws = 1;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 2, 'l4d2:boomer_bile')"
+						}
+					]
+				},
+				"molotov": {
+					"on_entry": [
+						"v.l4d2_throws = 2;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 2, 'l4d2:molotov')"
+						}
+					]
+				},
+				"pipe_bomb": {
+					"on_entry": [
+						"v.l4d2_throws = 3;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 2, 'l4d2:pipe_bomb')"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.l4d2.ui_firstaidkit_controller": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"on_entry": [
+						"v.l4d2_firstaidkit = 0;"
+					],
+					"transitions": [
+						{
+							"check": "(1.0)"
+						}
+					]
+				},
+				"check": {
+					"on_entry": [
+						"v.l4d2_firstaidkit = 0;"
+					],
+					"transitions": [
+						{
+							"firstaidkit": "q.is_item_name_any('slot.hotbar', 3, 'l4d2:firstaidkit')"
+						},
+						{
+							"defibrillators": "q.is_item_name_any('slot.hotbar', 3, 'l4d2:defibrillators')"
+						},
+						{
+							"explosive_ammo_pack": "q.is_item_name_any('slot.hotbar', 3, 'l4d2:explosive_ammo_pack')"
+						},
+						{
+							"incendiary_ammo_pack": "q.is_item_name_any('slot.hotbar', 3, 'l4d2:incendiary_ammo_pack')"
+						}
+					]
+				},
+				"firstaidkit": {
+					"on_entry": [
+						"v.l4d2_firstaidkit = 1;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 3, 'l4d2:firstaidkit')"
+						}
+					]
+				},
+				"defibrillators": {
+					"on_entry": [
+						"v.l4d2_firstaidkit = 2;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 3, 'l4d2:defibrillators')"
+						}
+					]
+				},
+				"explosive_ammo_pack": {
+					"on_entry": [
+						"v.l4d2_firstaidkit = 3;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 3, 'l4d2:explosive_ammo_pack')"
+						}
+					]
+				},
+				"incendiary_ammo_pack": {
+					"on_entry": [
+						"v.l4d2_firstaidkit = 4;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 3, 'l4d2:incendiary_ammo_pack')"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.l4d2.ui_medicines_controller": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"on_entry": [
+						"v.l4d2_medicines = 0;"
+					],
+					"transitions": [
+						{
+							"check": "(1.0)"
+						}
+					]
+				},
+				"check": {
+					"on_entry": [
+						"v.l4d2_medicines = 0;"
+					],
+					"transitions": [
+						{
+							"adrenaline": "q.is_item_name_any('slot.hotbar', 4, 'l4d2:adrenaline')"
+						},
+						{
+							"painpills": "q.is_item_name_any('slot.hotbar', 4, 'l4d2:painpills')"
+						}
+					]
+				},
+				"painpills": {
+					"on_entry": [
+						"v.l4d2_medicines = 2;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 4, 'l4d2:painpills')"
+						}
+					]
+				},
+				"adrenaline": {
+					"on_entry": [
+						"v.l4d2_medicines = 1;"
+					],
+					"transitions": [
+						{
+							"check": "!q.is_item_name_any('slot.hotbar', 4, 'l4d2:adrenaline')"
+						}
+					]
+				}
+			}
+		}
+	}
+}

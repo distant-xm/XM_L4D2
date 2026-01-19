@@ -1,0 +1,41 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.l4d2_null",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 18,
+				"visible_bounds_height": 6,
+				"visible_bounds_offset": [0, 1, 0]
+			},
+			"bones": [
+				{
+					"name": "l4d2_null",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-1, 0, -3],
+							"size": [2, 2, 6],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [2, 2]},
+								"east": {"uv": [0, 0], "uv_size": [6, 2]},
+								"south": {"uv": [0, 0], "uv_size": [2, 2]},
+								"west": {"uv": [0, 0], "uv_size": [6, 2]},
+								"up": {"uv": [2, 6], "uv_size": [-2, -6]},
+								"down": {"uv": [2, 6], "uv_size": [-2, -6]}
+							}
+						}
+					],
+					"locators": {
+						"blood_1": {
+							"offset": [0, 16, -16],
+							"rotation": [180, 0, 0]
+						}
+					}
+				}
+			]
+		}
+	]
+}

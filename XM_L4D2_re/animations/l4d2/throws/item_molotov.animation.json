@@ -1,0 +1,13 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.throws.move": {
+			"loop": "hold_on_last_frame",
+			"bones": {
+				"throws": {
+					"rotation": ["v.throws_1", "v.throws_2", "v.throws_3"]
+				}
+			}
+		}
+	}
+}

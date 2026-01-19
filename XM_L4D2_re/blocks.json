@@ -1,0 +1,16 @@
+{
+    "format_version": [
+        1,
+        1,
+        0
+    ],
+    "xm_l4d2:iron_crop": {
+        "sound": "grass",
+        "client_entity": {
+            "identifier": "xm_l4d2:iron_crop",
+            "hand_model_use_client_entity": true,
+            "block_icon": "xm_l4d2:seeds_iron",
+            "destroyed_textures": ""
+        }
+    }
+}

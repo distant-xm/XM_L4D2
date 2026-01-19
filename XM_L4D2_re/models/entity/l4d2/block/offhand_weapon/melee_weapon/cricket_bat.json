@@ -1,0 +1,71 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.l4d2.block_cricket_bat",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "cricket_bat",
+					"pivot": [6, 0.7, 0],
+					"rotation": [90, 0, 90],
+					"cubes": [
+						{
+							"origin": [5.6, 0.3, -4.8],
+							"size": [0.8, 0.8, 8],
+							"uv": {
+								"north": {"uv": [15, 24], "uv_size": [1, 1]},
+								"east": {"uv": [8, 22], "uv_size": [8, 1]},
+								"south": {"uv": [15, 25], "uv_size": [1, 1]},
+								"west": {"uv": [8, 23], "uv_size": [8, 1]},
+								"up": {"uv": [21, 26], "uv_size": [1, 8]},
+								"down": {"uv": [22, 34], "uv_size": [1, -8]}
+							}
+						},
+						{
+							"origin": [5.38, -0.5, -16.8],
+							"size": [1.2, 2.4, 12.8],
+							"uv": {
+								"north": {"uv": [12, 27], "uv_size": [2, 3]},
+								"east": {"uv": [0, 0], "uv_size": [32, 8]},
+								"south": {"uv": [12, 30], "uv_size": [2, 3]},
+								"west": {"uv": [0, 8], "uv_size": [32, 8]},
+								"up": {"uv": [32, 0], "uv_size": [8, 32]},
+								"down": {"uv": [40, 32], "uv_size": [8, -32]}
+							}
+						},
+						{
+							"origin": [5.38, -0.1, -17.2],
+							"size": [1.2, 1.6, 0.4],
+							"uv": {
+								"north": {"uv": [12, 27], "uv_size": [1, 3]},
+								"east": {"uv": [12, 27], "uv_size": [1, 3]},
+								"south": {"uv": [12, 27], "uv_size": [1, 3]},
+								"west": {"uv": [12, 27], "uv_size": [1, 3]},
+								"up": {"uv": [13, 30], "uv_size": [-1, -3]},
+								"down": {"uv": [13, 30], "uv_size": [-1, -3]}
+							}
+						},
+						{
+							"origin": [5.382, -0.498, -15.198],
+							"size": [1.196, 2.396, 3.996],
+							"inflate": 0.01,
+							"uv": {
+								"east": {"uv": [0, 51], "uv_size": [32, 13]},
+								"west": {"uv": [0, 51], "uv_size": [32, 13]},
+								"up": {"uv": [64, 32], "uv_size": [-13, 32]},
+								"down": {"uv": [64, 64], "uv_size": [-13, -32]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

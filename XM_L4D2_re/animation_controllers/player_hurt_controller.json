@@ -1,0 +1,166 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.l4d2.re.player_hurt": {
+	  "initial_state" : "default",
+      "states": {
+        "default": {
+          "transitions": [
+            { "bill_hurt": "q.property('l4d2:player_id') == 1" },
+            { "zoey_hurt": "q.property('l4d2:player_id') == 2" },
+            { "louis_hurt": "q.property('l4d2:player_id') == 3" },
+            { "francis_hurt": "q.property('l4d2:player_id') == 4" }
+          ]
+        },
+        "bill_hurt": {
+          "animations": [ "bill_hurt" ],
+          "transitions": [
+            { "default": "q.property('l4d2:player_id') != 1" }
+          ]
+        },
+        "zoey_hurt": {
+          "animations": [ "zoey_hurt" ],
+          "transitions": [
+            { "default": "q.property('l4d2:player_id') != 2" }
+          ]
+        },
+        "louis_hurt": {
+          "animations": [ "louis_hurt" ],
+          "transitions": [
+            { "default": "q.property('l4d2:player_id') != 3" }
+          ]
+        },
+        "francis_hurt": {
+          "animations": [ "francis_hurt" ],
+          "transitions": [
+            { "default": "q.property('l4d2:player_id') != 4" }
+          ]
+        }
+      }
+    },
+    "controller.animation.l4d2.re.bill_hurt": {
+	  "initial_state" : "default",
+      "states": {
+        "default": {
+          "animations": [ "hurt_cd" ],
+          "transitions": [
+            { "hurtminor": "q.all_animations_finished && q.health > 40 && q.property('l4d2:hurt') == 1" },
+            { "hurtmajor": "q.all_animations_finished && (q.health > 20 && q.health <= 40) && q.property('l4d2:hurt') == 1" },
+            { "hurtcritical": "q.all_animations_finished && (q.health > 0 && q.health <= 20) && q.property('l4d2:hurt') == 1" }
+          ]
+        },
+        "hurtminor": {
+          "animations": [ "bill_hurtminor" ],
+          "transitions": [
+            { "default": "q.property('l4d2:hurt') == 0" }
+          ]
+        },
+        "hurtmajor": {
+          "animations": [ "bill_hurtmajor" ],
+          "transitions": [
+            { "default": "q.property('l4d2:hurt') == 0" }
+          ]
+        },
+        "hurtcritical": {
+          "animations": [ "bill_hurtcritical" ],
+          "transitions": [
+            { "default": "q.property('l4d2:hurt') == 0" }
+          ]
+        }
+      }
+    },
+    "controller.animation.l4d2.re.zoey_hurt": {
+	  "initial_state" : "default",
+      "states": {
+        "default": {
+          "animations": [ "hurt_cd" ],
+          "transitions": [
+            { "hurtminor": "q.all_animations_finished && q.health > 40 && q.property('l4d2:hurt') == 1" },
+            { "hurtmajor": "q.all_animations_finished && (q.health > 20 && q.health <= 40) && q.property('l4d2:hurt') == 1" },
+            { "hurtcritical": "q.all_animations_finished && (q.health > 0 && q.health <= 20) && q.property('l4d2:hurt') == 1" }
+          ]
+        },
+        "hurtminor": {
+          "animations": [ "zoey_hurtminor" ],
+          "transitions": [
+            { "default": "q.property('l4d2:hurt') == 0" }
+          ]
+        },
+        "hurtmajor": {
+          "animations": [ "zoey_hurtmajor" ],
+          "transitions": [
+            { "default": "q.property('l4d2:hurt') == 0" }
+          ]
+        },
+        "hurtcritical": {
+          "animations": [ "zoey_hurtcritical" ],
+          "transitions": [
+            { "default": "q.property('l4d2:hurt') == 0" }
+          ]
+        }
+      }
+    },
+    "controller.animation.l4d2.re.louis_hurt": {
+	  "initial_state" : "default",
+      "states": {
+        "default": {
+          "animations": [ "hurt_cd" ],
+          "transitions": [
+            { "hurtminor": "q.all_animations_finished && q.health > 40 && q.property('l4d2:hurt') == 1" },
+            { "hurtmajor": "q.all_animations_finished && (q.health > 20 && q.health <= 40) && q.property('l4d2:hurt') == 1" },
+            { "hurtcritical": "q.all_animations_finished && (q.health > 0 && q.health <= 20) && q.property('l4d2:hurt') == 1" }
+          ]
+        },
+        "hurtminor": {
+          "animations": [ "louis_hurtminor" ],
+          "transitions": [
+            { "default": "q.property('l4d2:hurt') == 0" }
+          ]
+        },
+        "hurtmajor": {
+          "animations": [ "louis_hurtmajor" ],
+          "transitions": [
+            { "default": "q.property('l4d2:hurt') == 0" }
+          ]
+        },
+        "hurtcritical": {
+          "animations": [ "louis_hurtcritical" ],
+          "transitions": [
+            { "default": "q.property('l4d2:hurt') == 0" }
+          ]
+        }
+      }
+    },
+    "controller.animation.l4d2.re.francis_hurt": {
+	  "initial_state" : "default",
+      "states": {
+        "default": {
+          "animations": [ "hurt_cd" ],
+          "transitions": [
+            { "hurtminor": "q.all_animations_finished && q.health > 40 && q.property('l4d2:hurt') == 1" },
+            { "hurtmajor": "q.all_animations_finished && (q.health > 20 && q.health <= 40) && q.property('l4d2:hurt') == 1" },
+            { "hurtcritical": "q.all_animations_finished && (q.health > 0 && q.health <= 20) && q.property('l4d2:hurt') == 1" }
+          ]
+        },
+        "hurtminor": {
+          "animations": [ "francis_hurtminor" ],
+          "transitions": [
+            { "default": "q.property('l4d2:hurt') == 0" }
+          ]
+        },
+        "hurtmajor": {
+          "animations": [ "francis_hurtmajor" ],
+          "transitions": [
+            { "default": "q.property('l4d2:hurt') == 0" }
+          ]
+        },
+        "hurtcritical": {
+          "animations": [ "francis_hurtcritical" ],
+          "transitions": [
+            { "default": "q.property('l4d2:hurt') == 0" }
+          ]
+        }
+      }
+    }
+  }
+}

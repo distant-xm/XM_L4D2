@@ -1,0 +1,61 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.l4d2.block_nightstick",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "nightstick",
+					"pivot": [8.4, 0.6, 0],
+					"rotation": [0, 0, -90],
+					"binding": "q.item_slot_to_bone_name(c.item_slot)",
+					"cubes": [
+						{
+							"origin": [7.86641, 0.6, -0.53359],
+							"size": [1.06717, 17.0748, 1.06718],
+							"uv": {
+								"north": {"uv": [8, 13], "uv_size": [2, 1.5]},
+								"east": {"uv": [8, 14.5], "uv_size": [2, 1.5]},
+								"south": {"uv": [8, 10], "uv_size": [2, 1.5]},
+								"west": {"uv": [8, 11.5], "uv_size": [2, 1.5]},
+								"up": {"uv": [10, 16], "uv_size": [-2, -4.5]},
+								"down": {"uv": [10, 16], "uv_size": [-2, -4.5]}
+							}
+						},
+						{
+							"origin": [7.86641, 12.69465, 0.53359],
+							"size": [1.06717, 1.06717, 3.85943],
+							"uv": {
+								"north": {"uv": [8, 13], "uv_size": [2, 1.5]},
+								"east": {"uv": [8, 14.5], "uv_size": [2, 1.5]},
+								"south": {"uv": [8, 10], "uv_size": [2, 1.5]},
+								"west": {"uv": [8, 11.5], "uv_size": [2, 1.5]},
+								"up": {"uv": [10, 16], "uv_size": [-2, -4.5]},
+								"down": {"uv": [10, 16], "uv_size": [-2, -4.5]}
+							}
+						},
+						{
+							"origin": [7.71341, 12.54165, 4.37771],
+							"size": [1.37317, 1.37318, 0.79942],
+							"uv": {
+								"north": {"uv": [8, 13], "uv_size": [2, 1.5]},
+								"east": {"uv": [8, 14.5], "uv_size": [2, 1.5]},
+								"south": {"uv": [8, 10], "uv_size": [2, 1.5]},
+								"west": {"uv": [8, 11.5], "uv_size": [2, 1.5]},
+								"up": {"uv": [10, 16], "uv_size": [-2, -4.5]},
+								"down": {"uv": [10, 16], "uv_size": [-2, -4.5]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

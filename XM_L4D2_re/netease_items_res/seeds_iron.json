@@ -1,0 +1,12 @@
+{
+    "format_version": "1.10",
+    "minecraft:item": {
+        "description": {
+            "identifier": "xm_l4d2:seeds_iron",
+            "category": "Nature"
+        },
+        "components": {
+            "minecraft:icon": "xm_l4d2:seeds_iron"
+        }
+    }
+}

@@ -1,0 +1,182 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.steve.root_controller": {
+			"initial_state": "first_person",
+			"states": {
+				"first_person": {
+					"transitions": [
+						{
+							"third_person": "!variable.is_first_person"
+						}
+					]
+				},
+				"third_person": {
+					"animations": [
+						"third_person_controller"
+					],
+					"transitions": [
+						{
+							"first_person": "variable.is_first_person"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.steve.third_person_controller": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"third_person_controller.move_controller"
+					],
+					"transitions": [
+						{
+							"riding": "q.is_riding"
+						},
+						{
+							"sleep": "q.is_sleeping"
+						}
+					]
+				},
+				"riding": {
+					"transitions": [
+						{
+							"default": "!q.is_riding"
+						}
+					]
+				},
+				"sleep": {
+					"transitions": [
+						{
+							"default": "!q.is_sleeping"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.steve.third_person_controller.move_controller": {
+			"initial_state": "idle",
+			"states": {
+				"idle": {
+					"variables": {
+						"idle_speed": {
+							"input": "q.modified_move_speed",
+							"remap_curve": {
+								"0.0": 1,
+								"0.06": 0,
+								"0.25": 0
+							}
+						},
+						"walk_speed": {
+							"input": "q.modified_move_speed",
+							"remap_curve": {
+								"0.0": 0,
+								"0.06": 0,
+								"0.25": 1
+							}
+						}
+					},
+					"animations": [
+						{"idle_ram": "v.l4d2_item <= 0 && variable.idle_speed"},
+						{"idle_leg": "variable.idle_speed"},
+						{"walk_arm": "v.l4d2_item <= 0 && variable.walk_speed"},
+						{"walk_leg": "variable.walk_speed"}
+					],
+					"transitions": [
+						{"down": "q.vertical_speed < -13"},
+						{"jump": "q.vertical_speed > 5 && q.is_jumping && v.walk_speed <= 0.06 && !q.is_in_water"},
+						{"jump_move": "q.vertical_speed > 5 && q.is_jumping && v.walk_speed > 0.06 && !q.is_in_water"},
+						{"run": "q.is_sprinting"},
+						{"sneak": "q.is_sneaking"}
+					],
+					"blend_transition": 0.2
+				},
+				"jump": {
+					"animations": [
+						"jump_leg",
+						{"jump_arm": "v.l4d2_item <= 0"}
+					],
+					"transitions": [
+						{"landing": "q.vertical_speed < -1"}
+					],
+					"blend_transition": 0.2
+				},
+				"jump_move": {
+					"animations": [
+						"jump_move_leg",
+						{"jump_move_arm": "v.l4d2_item <= 0"}
+					],
+					"transitions": [
+						{"jump_remove": "q.is_on_ground || q.vertical_speed < -13"}
+					],
+					"blend_transition": 0.2
+				},
+				"jump_remove": {
+					"animations": [
+						"jump_remove_leg",
+						{"jump_remove_arm": "v.l4d2_item <= 0"}
+					],
+					"transitions": [
+						{"idle": "q.any_animation_finished"}
+					],
+					"blend_transition": 0.1
+				},
+				"down": {
+					"animations": ["down"],
+					"transitions": [
+						{"down_2": "q.vertical_speed < -26"},
+						{"landing": "q.is_on_ground"}
+					],
+					"blend_transition": 0.1
+				},
+				"down_2": {
+					"animations": ["down"],
+					"transitions": [
+						{"landing_2": "q.is_on_ground"}
+					],
+					"blend_transition": 0.1
+				},
+				"landing": {
+					"animations": ["landing"],
+					"transitions": [
+						{"idle": "q.any_animation_finished"}
+					],
+					"blend_transition": 0.1
+				},
+				"landing_2": {
+					"animations": ["landing_2"],
+					"transitions": [
+						{"idle": "q.any_animation_finished"}
+					],
+					"blend_transition": 0.1
+				},
+				"run": {
+					"animations": [
+						"run_leg",
+						{"run_arm": "v.l4d2_item <= 0"}
+					],
+					"transitions": [
+						{"idle": "!q.is_sprinting"},
+						{"jump": "q.vertical_speed > 5 && q.is_jumping && q.ground_speed <= 0"},
+						{"jump_move": "q.vertical_speed > 5 && q.is_jumping && q.ground_speed > 0"},
+						{"down": "q.vertical_speed < -13"}
+					],
+					"blend_transition": 0.2
+				},
+				"sneak": {
+					"animations": [
+						"sneak_leg",
+						{"sneak_arm": "v.l4d2_item <= 0"}
+					],
+					"transitions": [
+						{"jump": "q.is_jumping"},
+						{"down": "q.vertical_speed < -13"},
+						{"idle": "!q.is_sneaking"}
+					],
+					"blend_transition": 0.1
+				}
+			}
+		}
+	}
+}

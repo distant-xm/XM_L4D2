@@ -1,0 +1,169 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.item_pipe_bomb.particle_effects": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 6,
+			"particle_effects": {
+				"0.0": {
+					"effect": "beep"
+				},
+				"0.5": {
+					"effect": "beep"
+				},
+				"1.0": {
+					"effect": "beep"
+				},
+				"1.5": {
+					"effect": "beep"
+				},
+				"2.0": {
+					"effect": "beep"
+				},
+				"2.5": {
+					"effect": "beep"
+				},
+				"3.0": {
+					"effect": "beep"
+				},
+				"3.5": {
+					"effect": "beep"
+				},
+				"4.0": {
+					"effect": "beep"
+				},
+				"4.2": {
+					"effect": "beep"
+				},
+				"4.4": {
+					"effect": "beep"
+				},
+				"4.6": {
+					"effect": "beep"
+				},
+				"4.8": {
+					"effect": "beep"
+				},
+				"5.0": {
+					"effect": "beep"
+				},
+				"5.1": {
+					"effect": "beep"
+				},
+				"5.2": {
+					"effect": "beep"
+				},
+				"5.3": {
+					"effect": "beep"
+				},
+				"5.4": {
+					"effect": "beep"
+				},
+				"5.5": {
+					"effect": "beep"
+				},
+				"5.6": {
+					"effect": "beep"
+				},
+				"5.7": {
+					"effect": "beep"
+				},
+				"5.8": {
+					"effect": "beep"
+				},
+				"5.9": {
+					"effect": "beep"
+				},
+				"6.0": {
+					"effect": "beep"
+				}
+			}
+		},
+		"animation.pipe_bomb.sound_effects_1": {
+			"animation_length": 6,
+			"loop": "hold_on_last_frame",
+            "sound_effects": {
+				"0.0": {
+					"effect": "beep"
+				},
+				"0.5": {
+					"effect": "beep"
+				},
+				"1.0": {
+					"effect": "beep"
+				},
+				"1.5": {
+					"effect": "beep"
+				},
+				"2.0": {
+					"effect": "beep"
+				},
+				"2.5": {
+					"effect": "beep"
+				},
+				"3.0": {
+					"effect": "beep"
+				},
+				"3.5": {
+					"effect": "beep"
+				},
+				"4.0": {
+					"effect": "beep"
+				},
+				"4.2": {
+					"effect": "beep"
+				},
+				"4.4": {
+					"effect": "beep"
+				},
+				"4.6": {
+					"effect": "beep"
+				},
+				"4.8": {
+					"effect": "beep"
+				},
+				"5.0": {
+					"effect": "beep"
+				},
+				"5.1": {
+					"effect": "beep"
+				},
+				"5.2": {
+					"effect": "beep"
+				},
+				"5.3": {
+					"effect": "beep"
+				},
+				"5.4": {
+					"effect": "beep"
+				},
+				"5.5": {
+					"effect": "beep"
+				},
+				"5.6": {
+					"effect": "beep"
+				},
+				"5.7": {
+					"effect": "beep"
+				},
+				"5.8": {
+					"effect": "beep"
+				},
+				"5.9": {
+					"effect": "beep"
+				},
+				"6.0": {
+					"effect": "beep"
+				}
+			}
+		},
+		"animation.pipe_bomb.sound_effects_2": {
+			"loop": "hold_on_last_frame",
+			"sound_effects": {
+				"0.0": {
+					"effect": "bounce"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,306 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.ui_sidebar",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 6,
+				"visible_bounds_height": 20,
+				"visible_bounds_offset": [0, 9, 0]
+			},
+			"bones": [
+				{
+					"name": "ui_all",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "ui_sidebar",
+					"parent": "ui_all",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "ui_mainhand_weapon_background",
+					"parent": "ui_sidebar",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-17, 7.5, 1],
+							"size": [16, 8, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16]}
+							}
+						}
+					]
+				},
+				{
+					"name": "ui_mainhand_weapon",
+					"parent": "ui_sidebar",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-19, 13, 0],
+							"size": [18, 6, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16]}
+							}
+						}
+					]
+				},
+				{
+					"name": "ui_ammo",
+					"parent": "ui_sidebar",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-9, 7.5, 0],
+							"size": [8, 8, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16]}
+							}
+						}
+					]
+				},
+				{
+					"name": "ui_mainhand_number_1",
+					"parent": "ui_sidebar",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-11.5, 10.5, 0],
+							"size": [2, 3, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16]}
+							}
+						}
+					]
+				},
+				{
+					"name": "ui_mainhand_number_10",
+					"parent": "ui_sidebar",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-14, 10.5, 0],
+							"size": [2, 3, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16]}
+							}
+						}
+					]
+				},
+				{
+					"name": "ui_mainhand_number_100",
+					"parent": "ui_sidebar",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-16.5, 10.5, 0],
+							"size": [2, 3, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16]}
+							}
+						}
+					]
+				},
+				{
+					"name": "ui_spare_ammunition_1",
+					"parent": "ui_sidebar",
+					"pivot": [-0.5, 0.25, 0],
+					"cubes": [
+						{
+							"origin": [-12, 8.25, 0],
+							"size": [1, 1.5, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16]}
+							}
+						}
+					]
+				},
+				{
+					"name": "ui_spare_ammunition_10",
+					"parent": "ui_sidebar",
+					"pivot": [-0.25, 0, 0],
+					"cubes": [
+						{
+							"origin": [-13.5, 8.25, 0],
+							"size": [1, 1.5, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16]}
+							}
+						}
+					]
+				},
+				{
+					"name": "ui_spare_ammunition_100",
+					"parent": "ui_sidebar",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-15, 8.25, 0],
+							"size": [1, 1.5, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16]}
+							}
+						}
+					]
+				},
+				{
+					"name": "ui_offhand_weapon_background",
+					"parent": "ui_sidebar",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-17, 0, 1],
+							"size": [16, 7, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16]}
+							}
+						}
+					]
+				},
+				{
+					"name": "ui_offhand_weapon",
+					"parent": "ui_sidebar",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-17, 0, 0],
+							"size": [16, 7, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16]}
+							}
+						}
+					]
+				},
+				{
+					"name": "ui_offhand_number_1",
+					"parent": "ui_sidebar",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-11, 2, -1],
+							"size": [2, 3, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16]}
+							}
+						}
+					]
+				},
+				{
+					"name": "ui_offhand_number_10",
+					"parent": "ui_sidebar",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-13.5, 2, -1],
+							"size": [2, 3, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16]}
+							}
+						}
+					]
+				},
+				{
+					"name": "ui_offhand_number_100",
+					"parent": "ui_sidebar",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-16, 2, -1],
+							"size": [2, 3, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16]}
+							}
+						}
+					]
+				},
+				{
+					"name": "ui_throws_background",
+					"parent": "ui_sidebar",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, -7.5, 1],
+							"size": [7, 7, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16]}
+							}
+						}
+					]
+				},
+				{
+					"name": "ui_throws",
+					"parent": "ui_sidebar",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, -7.5, 0],
+							"size": [7, 7, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16]}
+							}
+						}
+					]
+				},
+				{
+					"name": "ui_firstaidkit_background",
+					"parent": "ui_sidebar",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, -15, 1],
+							"size": [7, 7, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16]}
+							}
+						}
+					]
+				},
+				{
+					"name": "ui_firstaidkit",
+					"parent": "ui_sidebar",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, -15, 0],
+							"size": [7, 7, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16]}
+							}
+						}
+					]
+				},
+				{
+					"name": "ui_medicines_background",
+					"parent": "ui_sidebar",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, -22.5, 1],
+							"size": [7, 7, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16]}
+							}
+						}
+					]
+				},
+				{
+					"name": "ui_medicines",
+					"parent": "ui_sidebar",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, -22.5, 0],
+							"size": [7, 7, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

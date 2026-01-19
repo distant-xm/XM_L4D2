@@ -1,0 +1,14 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.l4d2_melee_attack.move": {
+			"loop": true,
+			"bones": {
+				"l4d2_melee_attack": {
+					"rotation": ["-q.target_x_rotation", "-q.body_y_rotation", 0],
+					"scale": [1, 1, 100]
+				}
+			}
+		}
+	}
+}

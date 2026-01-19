@@ -1,0 +1,62 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.l4d2.ui_position": {
+			"loop": true,
+			"bones": {
+				"ui_health_black": {
+					"scale": ["1 - v.l4d2_health", 1, 1]
+				},
+				"ui_temporary_hp": {
+					"position": ["(32.5 * v.temporary_hp)", 0, 0]
+				},
+				"ui_mainhand_number_1": {
+					"position": ["q.property('l4d2:m_ammo') < 100 ? -1", 0, 0]
+				},
+				"ui_mainhand_number_10": {
+					"position": ["q.property('l4d2:m_ammo') < 100 ? -1", 0, 0]
+				},
+				"ui_offhand_number_1": {
+					"position": ["q.property('l4d2:o_ammo') < 100 ? -1", 0, 0]
+				},
+				"ui_offhand_number_10": {
+					"position": ["q.property('l4d2:o_ammo') < 100 ? -1", 0, 0]
+				},
+				"ui_healthbar": {
+					"position": [0, "v.ui_healthbar", 0]
+				},
+				"ui_sidebar": {
+					"position": [0, "v.ui_sidebar", 0]
+				},
+				"ui_adrenaline_effect": {
+					"position": [0, "v.ui_adrenaline_effect", 0]
+				}
+			}
+		},
+		"animation.l4d2.ui_position_ride": {
+			"loop": true,
+			"bones": {
+				"ui_all": {
+					"rotation": ["q.target_x_rotation", "q.target_y_rotation", 0]
+				}
+			}
+		},
+		"animation.l4d2.ui_position_swim": {
+			"loop": true,
+			"bones": {
+				"ui_all": {
+					"position": [0, -6.57, 0]
+				}
+			}
+		},
+		"animation.l4d2.ui_position_glide": {
+			"loop": true,
+			"bones": {
+				"ui_all": {
+					"rotation": ["-90 + q.target_x_rotation", 0, 0],
+					"position": [0, 24, 0]
+				}
+			}
+		}
+	}
+}

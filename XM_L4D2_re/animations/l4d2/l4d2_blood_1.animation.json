@@ -1,0 +1,19 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.l4d2.blood_1": {
+			"loop": true,
+			"bones": {
+				"l4d2_null": {
+					"rotation": ["-q.target_x_rotation", "-q.body_y_rotation", 0]
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "blood_1",
+					"locator": "blood_1"
+				}
+			}
+		}
+	}
+}

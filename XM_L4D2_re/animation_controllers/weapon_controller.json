@@ -1,0 +1,486 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.l4d2.weapon_controller": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "on_entry": [
+            "v.l4d2_item = 0;"
+          ],
+          "transitions": [
+            {
+              "check": "(1.0)"
+            }
+          ]
+        },
+        "check": {
+          "on_entry": [
+            "v.l4d2_item = 0;"
+          ],
+          "transitions": [
+            {
+              "adrenaline": "q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:adrenaline')"
+            },
+            {
+              "painpills": "q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:painpills')"
+            },
+            {
+              "shotgun_spas": "q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:shotgun_spas')"
+            },
+            {
+              "ak47": "q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:ak47')"
+            },
+            {
+              "boomer_bile": "q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:boomer_bile')"
+            },
+            {
+              "pipe_bomb": "q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:pipe_bomb')"
+            },
+            {
+              "molotov": "q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:molotov')"
+            },
+            {
+              "deagle": "q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:deagle')"
+            },
+            {
+              "two_pistol": "q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:two_pistol')"
+            },
+            {
+              "pistol": "q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:pistol')"
+            },
+            {
+              "shovel": "q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:shovel')"
+            },
+            {
+              "riot_shield": "q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:riot_shield')"
+            },
+            {
+              "pitchfork": "q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:pitchfork')"
+            },
+            {
+              "nightstick": "q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:nightstick')"
+            },
+            {
+              "machete": "q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:machete')"
+            },
+            {
+              "knife": "q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:knife')"
+            },
+            {
+              "katana": "q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:katana')"
+            },
+            {
+              "golf_club": "q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:golf_club')"
+            },
+            {
+              "frying_pan": "q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:frying_pan')"
+            },
+            {
+              "fireaxe": "q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:fireaxe')"
+            },
+            {
+              "electric_guitar": "q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:electric_guitar')"
+            },
+            {
+              "crowbar": "q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:crowbar')"
+            },
+            {
+              "cricket_bat": "q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:cricket_bat')"
+            },
+            {
+              "chainsaw": "q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:chainsaw')"
+            },
+            {
+              "baseball_bat": "q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:baseball_bat')"
+            }
+          ]
+        },
+        "adrenaline": {
+          "on_entry": [
+            "v.l4d2_item = 25;",
+            "v.has_item = 1;"
+          ],
+          "animations": [
+            "adrenaline_controller"
+          ],
+          "transitions": [
+            {
+              "check": "v.has_item == 0"
+            }
+          ]
+        },
+        "painpills": {
+          "on_entry": [
+            "v.l4d2_item = 24;",
+            "v.has_item = 1;"
+          ],
+          "animations": [
+            "painpills_controller"
+          ],
+          "transitions": [
+            {
+              "check": "v.has_item == 0"
+            }
+          ]
+        },
+        "shotgun_spas": {
+          "on_entry": [
+            "v.l4d2_item = 23;"
+          ],
+          "animations": [
+            "shotgun_spas_controller"
+          ],
+          "transitions": [
+            {
+              "check": "!q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:shotgun_spas')"
+            }
+          ]
+        },
+        "ak47": {
+          "on_entry": [
+            "v.l4d2_item = 22;"
+          ],
+          "animations": [
+            "ak47_controller"
+          ],
+          "transitions": [
+            {
+              "check": "!q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:ak47')"
+            }
+          ]
+        },
+        "boomer_bile": {
+          "on_entry": [
+            "v.l4d2_item = 21;"
+          ],
+          "animations": [
+            "throws_controller"
+          ],
+          "transitions": [
+            {
+              "check": "!q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:boomer_bile')"
+            }
+          ]
+        },
+        "pipe_bomb": {
+          "on_entry": [
+            "v.l4d2_item = 20;"
+          ],
+          "animations": [
+            "throws_controller"
+          ],
+          "transitions": [
+            {
+              "check": "!q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:pipe_bomb')"
+            }
+          ]
+        },
+        "molotov": {
+          "on_entry": [
+            "v.l4d2_item = 19;"
+          ],
+          "animations": [
+            "throws_controller"
+          ],
+          "transitions": [
+            {
+              "check": "!q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:molotov')"
+            }
+          ]
+        },
+        "deagle": {
+          "on_entry": [
+            "v.l4d2_item = 18;"
+          ],
+          "animations": [
+            "deagle_controller"
+          ],
+          "transitions": [
+            {
+              "check": "!q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:deagle')"
+            }
+          ]
+        },
+        "two_pistol": {
+          "on_entry": [
+            "v.l4d2_item = 17;"
+          ],
+          "animations": [
+            "two_pistol_controller"
+          ],
+          "transitions": [
+            {
+              "check": "!q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:two_pistol')"
+            }
+          ]
+        },
+        "pistol": {
+          "on_entry": [
+            "v.l4d2_item = 16;"
+          ],
+          "animations": [
+            "pistol_controller"
+          ],
+          "transitions": [
+            {
+              "check": "!q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:pistol')"
+            }
+          ]
+        },
+        "shovel": {
+          "on_entry": [
+            "v.l4d2_item = 15;"
+          ],
+          "animations": [
+            "shovel_controller"
+          ],
+          "transitions": [
+            {
+              "check": "!q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:shovel')"
+            }
+          ]
+        },
+        "riot_shield": {
+          "on_entry": [
+            "v.l4d2_item = 14;"
+          ],
+          "animations": [
+            "riot_shield_controller"
+          ],
+          "transitions": [
+            {
+              "check": "!q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:riot_shield')"
+            }
+          ]
+        },
+        "pitchfork": {
+          "on_entry": [
+            "v.l4d2_item = 13;"
+          ],
+          "animations": [
+            "pitchfork_controller"
+          ],
+          "transitions": [
+            {
+              "check": "!q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:pitchfork')"
+            }
+          ]
+        },
+        "nightstick": {
+          "on_entry": [
+            "v.l4d2_item = 12;"
+          ],
+          "animations": [
+            "nightstick_controller"
+          ],
+          "transitions": [
+            {
+              "check": "!q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:nightstick')"
+            }
+          ]
+        },
+        "machete": {
+          "on_entry": [
+            "v.l4d2_item = 11;"
+          ],
+          "animations": [
+            "machete_controller"
+          ],
+          "transitions": [
+            {
+              "check": "!q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:machete')"
+            }
+          ]
+        },
+        "knife": {
+          "on_entry": [
+            "v.l4d2_item = 10;"
+          ],
+          "animations": [
+            "knife_controller"
+          ],
+          "transitions": [
+            {
+              "check": "!q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:knife')"
+            }
+          ]
+        },
+        "katana": {
+          "on_entry": [
+            "v.l4d2_item = 9;"
+          ],
+          "animations": [
+            "katana_controller"
+          ],
+          "transitions": [
+            {
+              "check": "!q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:katana')"
+            }
+          ]
+        },
+        "golf_club": {
+          "on_entry": [
+            "v.l4d2_item = 8;"
+          ],
+          "animations": [
+            "golf_club_controller"
+          ],
+          "transitions": [
+            {
+              "check": "!q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:golf_club')"
+            }
+          ]
+        },
+        "frying_pan": {
+          "on_entry": [
+            "v.l4d2_item = 7;"
+          ],
+          "animations": [
+            "frying_pan_controller"
+          ],
+          "transitions": [
+            {
+              "check": "!q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:frying_pan')"
+            }
+          ]
+        },
+        "fireaxe": {
+          "on_entry": [
+            "v.l4d2_item = 6;"
+          ],
+          "animations": [
+            "fireaxe_controller"
+          ],
+          "transitions": [
+            {
+              "check": "!q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:fireaxe')"
+            }
+          ]
+        },
+        "electric_guitar": {
+          "on_entry": [
+            "v.l4d2_item = 5;"
+          ],
+          "animations": [
+            "electric_guitar_controller"
+          ],
+          "transitions": [
+            {
+              "check": "!q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:electric_guitar')"
+            }
+          ]
+        },
+        "crowbar": {
+          "on_entry": [
+            "v.l4d2_item = 4;"
+          ],
+          "animations": [
+            "crowbar_controller"
+          ],
+          "transitions": [
+            {
+              "check": "!q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:crowbar')"
+            }
+          ]
+        },
+        "cricket_bat": {
+          "on_entry": [
+            "v.l4d2_item = 3;"
+          ],
+          "animations": [
+            "cricket_bat_controller"
+          ],
+          "transitions": [
+            {
+              "check": "!q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:cricket_bat')"
+            }
+          ]
+        },
+        "chainsaw": {
+          "on_entry": [
+            "v.l4d2_item = 2;"
+          ],
+          "animations": [
+            "chainsaw_controller"
+          ],
+          "transitions": [
+            {
+              "check": "q.property('l4d2:offhand_weapon_id') != 2"
+            }
+          ]
+        },
+        "baseball_bat": {
+          "on_entry": [
+            "v.l4d2_item = 1;"
+          ],
+          "animations": [
+            "baseball_bat_controller"
+          ],
+          "transitions": [
+            {
+              "check": "!q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:baseball_bat')"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.l4d2.throws_controller": {
+      "initial_state": "holding",
+      "states": {
+        "holding": {
+          "animations": [
+            "throw_holding"
+          ],
+          "transitions": [
+            {
+              "throws_1": "q.property('l4d2:throws_using') == 1"
+            },
+            {
+              "pushing": "q.property('l4d2:push') == 1"
+            }
+          ]
+        },
+        "throws_1": {
+          "animations": [
+            "throw_throwing_1"
+          ],
+          "transitions": [
+            {
+              "throws_2": "q.property('l4d2:throws_using') == 2"
+            },
+            {
+              "holding": "q.property('l4d2:throws_using') == 0"
+            }
+          ],
+          "blend_transition": 0.2
+        },
+        "throws_2": {
+          "animations": [
+            "throw_throwing_2",
+            { "bill_molotov": "q.property('l4d2:player_id') == 1" },
+            { "zoey_molotov": "q.property('l4d2:player_id') == 2" },
+            { "louis_molotov": "q.property('l4d2:player_id') == 3" },
+            { "francis_molotov": "q.property('l4d2:player_id') == 4" }
+          ],
+          "transitions": [
+            {
+              "holding": "q.property('l4d2:throws_using') == 0"
+            }
+          ],
+          "blend_transition": 0.2
+        },
+        "pushing": {
+          "animations": [
+            "throw_pushing"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

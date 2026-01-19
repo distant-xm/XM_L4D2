@@ -1,0 +1,20 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "xm_l4d2:iron_crop",
+            "geometry": {
+                "default": "geometry.xm.iron_crop"
+            },
+            "textures": {
+                "default": "textures/blocks/iron_ore"
+            },
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "render_controllers": [
+                "controller.render.xm.iron_crop"
+            ]
+        }
+    }
+}

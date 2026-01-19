@@ -1,0 +1,136 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.l4d2.shotgun_spas_controller": {
+      "initial_state": "holding",
+      "states": {
+        "holding": {
+          "animations": [
+            { "shotgun_spas_holding_first": "v.is_first_person" },
+            { "shotgun_spas_holding_third": "!v.is_first_person" }
+          ],
+          "transitions": [
+            {
+              "reloading": "q.property('l4d2:reloading')"
+            },
+            {
+              "pushing": "q.property('l4d2:push')"
+            }
+          ]
+        },
+        "reloading": {
+          "animations": [
+            { "shotgun_spas_reloading_first": "v.is_first_person" },
+            { "shotgun_spas_reloading_third": "!v.is_first_person" }
+          ],
+          "transitions": [
+            {
+              "holding": "!q.property('l4d2:reloading')"
+            },
+            {
+              "reloading": "q.any_animation_finished && q.property('l4d2:reloading')"
+            }
+          ]
+        },
+        "pushing": {
+          "animations": [
+            { "shotgun_spas_pushing_first": "v.is_first_person" },
+            { "shotgun_spas_pushing_third": "!v.is_first_person" }
+          ],
+          "transitions": [
+            {
+              "holding": "!q.property('l4d2:push')"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.l4d2.ak47_controller": {
+      "initial_state": "holding",
+      "states": {
+        "holding": {
+          "animations": [
+            { "ak47_holding_first": "v.is_first_person" },
+            { "ak47_holding_third": "!v.is_first_person" }
+          ],
+          "transitions": [
+            {
+              "reloading": "q.property('l4d2:reloading')"
+            },
+            {
+              "pushing": "q.property('l4d2:push')"
+            }
+          ],
+          "blend_transition": 0.25,
+          "blend_via_shortest_path": true
+        },
+        "reloading": {
+          "animations": [
+            { "ak47_reloading_first": "v.is_first_person" },
+            { "ak47_reloading_third": "!v.is_first_person" }
+          ],
+          "transitions": [
+            {
+              "holding": "!q.property('l4d2:reloading')"
+            }
+          ]
+        },
+        "pushing": {
+          "animations": [
+            { "ak47_pushing_first": "v.is_first_person" },
+            { "ak47_pushing_third": "!v.is_first_person" }
+          ],
+          "transitions": [
+            {
+              "holding": "!q.property('l4d2:push')"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.l4d2.w_weapon_shoot_controller": {
+      "initial_state": "check",
+      "states": {
+        "check": {
+          "on_entry": [
+            "v.shotgun_spas_shoot = math.random(-13,-5);",
+            "v.shotgun_spas_shoot_2 = math.random(-2,2);",
+            "v.ak47_shoot = math.random(-3,-3);"
+          ],
+          "transitions": [
+            {
+              "shotgun_spas_shoot": "v.l4d2_item == 23 && q.property('l4d2:m_weapon_using')"
+            },
+            {
+              "ak47_shoot": "v.l4d2_item == 22 && q.property('l4d2:m_weapon_using')"
+            }
+          ],
+          "blend_transition": 0.1,
+          "blend_via_shortest_path": true
+        },
+        "shotgun_spas_shoot": {
+          "animations": [
+            { "shotgun_spas_shoot_first": "v.is_first_person" },
+            { "shotgun_spas_shoot_third": "!v.is_first_person" }
+          ],
+          "transitions": [
+            {
+              "check": "q.any_animation_finished"
+            }
+          ]
+        },
+        "ak47_shoot": {
+          "animations": [
+            { "ak47_shoot_first": "v.is_first_person" },
+            { "ak47_shoot_third": "!v.is_first_person" }
+          ],
+          "transitions": [
+            {
+              "check": "q.any_animation_finished"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

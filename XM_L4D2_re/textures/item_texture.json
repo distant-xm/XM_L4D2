@@ -1,0 +1,164 @@
+{
+  "resource_pack_name": "vanilla",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "xm_l4d2:seeds_iron": {
+      "textures": "textures/items/seeds_iron"
+    },
+    
+    "xm_l4d2:select_player": {
+      "textures": "textures/l4d2/items/select_player"
+    },
+    "l4d2.player_bill": {
+      "textures": "textures/l4d2/items/player/bill"
+    },
+
+//mainhand_weapon
+    "l4d2.ak47": {
+      "textures": "textures/l4d2/items/ak47"
+    },
+    "l4d2.awp": {
+      "textures": "textures/l4d2/items/awp"
+    },
+    "l4d2.g3sg1": {
+      "textures": "textures/l4d2/items/g3sg1"
+    },
+    "l4d2.grenade_launcher": {
+      "textures": "textures/l4d2/items/grenade_launcher"
+    },
+    "l4d2.m16": {
+      "textures": "textures/l4d2/items/m16"
+    },
+    "l4d2.m60": {
+      "textures": "textures/l4d2/items/m60"
+    },
+    "l4d2.mac_10": {
+      "textures": "textures/l4d2/items/mac_10"
+    },
+    "l4d2.mini_14": {
+      "textures": "textures/l4d2/items/mini_14"
+    },
+    "l4d2.mp5": {
+      "textures": "textures/l4d2/items/mp5"
+    },
+    "l4d2.scar": {
+      "textures": "textures/l4d2/items/scar"
+    },
+    "l4d2.scout": {
+      "textures": "textures/l4d2/items/scout"
+    },
+    "l4d2.sg552": {
+      "textures": "textures/l4d2/items/sg552"
+    },
+    "l4d2.shotgun_m37": {
+      "textures": "textures/l4d2/items/shotgun_m37"
+    },
+    "l4d2.shotgun_m870": {
+      "textures": "textures/l4d2/items/shotgun_m870"
+    },
+    "l4d2.shotgun_m1014": {
+      "textures": "textures/l4d2/items/shotgun_m1014"
+    },
+    "l4d2.shotgun_spas": {
+      "textures": "textures/l4d2/items/shotgun_spas"
+    },
+    "l4d2.uzi": {
+      "textures": "textures/l4d2/items/uzi"
+    },
+
+//offhand weapon
+    "l4d2.baseball_bat": {
+      "textures": "textures/l4d2/items/baseball_bat"
+    },
+    "l4d2.chainsaw": {
+      "textures": "textures/l4d2/items/chainsaw"
+    },
+    "l4d2.cricket_bat": {
+      "textures": "textures/l4d2/items/cricket_bat"
+    },
+    "l4d2.crowbar": {
+      "textures": "textures/l4d2/items/crowbar"
+    },
+    "l4d2.electric_guitar": {
+      "textures": "textures/l4d2/items/electric_guitar"
+    },
+    "l4d2.fireaxe": {
+      "textures": "textures/l4d2/items/fireaxe"
+    },
+    "l4d2.frying_pan": {
+      "textures": "textures/l4d2/items/frying_pan"
+    },
+    "l4d2.golf_club": {
+      "textures": "textures/l4d2/items/golf_club"
+    },
+    "l4d2.katana": {
+      "textures": "textures/l4d2/items/katana"
+    },
+    "l4d2.knife": {
+      "textures": "textures/l4d2/items/knife"
+    },
+    "l4d2.machete": {
+      "textures": "textures/l4d2/items/machete"
+    },
+    "l4d2.nightstick": {
+      "textures": "textures/l4d2/items/nightstick"
+    },
+    "l4d2.pitchfork": {
+      "textures": "textures/l4d2/items/pitchfork"
+    },
+    "l4d2.riot_shield": {
+      "textures": "textures/l4d2/items/riot_shield"
+    },
+    "l4d2.shovel": {
+      "textures": "textures/l4d2/items/shovel"
+    },
+    "l4d2.deagle": {
+      "textures": "textures/l4d2/items/deagle"
+    },
+    "l4d2.pistol": {
+      "textures": "textures/l4d2/items/pistol"
+    },
+    "l4d2.two_pistol": {
+      "textures": "textures/l4d2/items/two_pistol"
+    },
+//firstaidkit
+    "l4d2.firstaidkit": {
+      "textures": "textures/l4d2/items/firstaidkit"
+    },
+    "l4d2.defibrillators": {
+      "textures": "textures/l4d2/items/defibrillators"
+    },
+    "l4d2.explosive_ammo_pack": {
+      "textures": "textures/l4d2/items/explosive_ammo_pack"
+    },
+    "l4d2.incendiary_ammo_pack": {
+      "textures": "textures/l4d2/items/incendiary_ammo_pack"
+    },
+//throws
+    "l4d2.boomer_bile": {
+      "textures": "textures/l4d2/items/boomer_bile"
+    },
+    "l4d2.pipe_bomb": {
+      "textures": "textures/l4d2/items/pipe_bomb"
+    },
+    "l4d2.molotov": {
+      "textures": "textures/l4d2/items/molotov"
+    },
+//medicines
+    "l4d2.painpills": {
+      "textures": "textures/l4d2/items/painpills"
+    },
+    "l4d2.adrenaline": {
+      "textures": "textures/l4d2/items/adrenaline"
+    },
+
+
+
+
+    "ban": {
+      "textures": "textures/l4d2/items/ban"
+    }
+  }
+}
+
+

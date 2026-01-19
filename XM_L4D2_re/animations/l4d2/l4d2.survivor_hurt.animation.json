@@ -1,0 +1,113 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.l4d2.hurt_cd": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 1.7
+		},
+		"animation.l4d2.bill_fall": {
+			"loop": "hold_on_last_frame",
+			"sound_effects": {
+				"0.0": {
+					"effect": "bill_fall"
+				}
+			}
+		},
+		"animation.l4d2.bill_hurtminor": {
+			"loop": "hold_on_last_frame",
+			"sound_effects": {
+				"0.0": {
+					"effect": "bill_hurtminor"
+				}
+			}
+		},
+		"animation.l4d2.bill_hurtmajor": {
+			"loop": "hold_on_last_frame",
+			"sound_effects": {
+				"0.0": {
+					"effect": "bill_hurtmajor"
+				}
+			}
+		},
+		"animation.l4d2.bill_hurtcritical": {
+			"loop": "hold_on_last_frame",
+			"sound_effects": {
+				"0.0": {
+					"effect": "bill_hurtcritical"
+				}
+			}
+		},
+		"animation.l4d2.zoey_hurtminor": {
+			"loop": "hold_on_last_frame",
+			"sound_effects": {
+				"0.0": {
+					"effect": "zoey_hurtminor"
+				}
+			}
+		},
+		"animation.l4d2.zoey_hurtmajor": {
+			"loop": "hold_on_last_frame",
+			"sound_effects": {
+				"0.0": {
+					"effect": "zoey_hurtmajor"
+				}
+			}
+		},
+		"animation.l4d2.zoey_hurtcritical": {
+			"loop": "hold_on_last_frame",
+			"sound_effects": {
+				"0.0": {
+					"effect": "zoey_hurtcritical"
+				}
+			}
+		},
+		"animation.l4d2.louis_hurtminor": {
+			"loop": "hold_on_last_frame",
+			"sound_effects": {
+				"0.0": {
+					"effect": "louis_hurtminor"
+				}
+			}
+		},
+		"animation.l4d2.louis_hurtmajor": {
+			"loop": "hold_on_last_frame",
+			"sound_effects": {
+				"0.0": {
+					"effect": "louis_hurtmajor"
+				}
+			}
+		},
+		"animation.l4d2.louis_hurtcritical": {
+			"loop": "hold_on_last_frame",
+			"sound_effects": {
+				"0.0": {
+					"effect": "louis_hurtcritical"
+				}
+			}
+		},
+		"animation.l4d2.francis_hurtminor": {
+			"loop": "hold_on_last_frame",
+			"sound_effects": {
+				"0.0": {
+					"effect": "francis_hurtminor"
+				}
+			}
+		},
+		"animation.l4d2.francis_hurtmajor": {
+			"loop": "hold_on_last_frame",
+			"sound_effects": {
+				"0.0": {
+					"effect": "francis_hurtmajor"
+				}
+			}
+		},
+		"animation.l4d2.francis_hurtcritical": {
+			"loop": "hold_on_last_frame",
+			"sound_effects": {
+				"0.0": {
+					"effect": "francis_hurtcritical"
+				}
+			}
+		}
+	}
+}

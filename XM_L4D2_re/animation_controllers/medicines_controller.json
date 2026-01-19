@@ -1,0 +1,113 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.l4d2.painpills_controller": {
+      "initial_state": "holding",
+      "states": {
+        "holding": {
+          "animations": [
+            "painpills_holding"
+          ],
+          "transitions": [
+            {
+              "out_holding": "!q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:painpills')"
+            },
+            {
+              "painpills_using": "q.is_using_item && (q.health < q.max_health)"
+            },
+            {
+              "pushing": "q.property('l4d2:push') == 1"
+            }
+          ]
+        },
+        "out_holding": {
+          "on_entry": [
+            "v.has_item = 0;"
+          ],
+          "animations": [
+            "painpills_holding"
+          ],
+          "transitions": [
+            {
+              "holding": "1.0"
+            }
+          ]
+        },
+        "painpills_using": {
+          "animations": [
+            "painpills_using"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished || !q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:painpills')"
+            }
+          ]
+        },
+        "pushing": {
+          "animations": [
+            "painpills_pushing"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished || q.property('l4d2:push') == 0"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.l4d2.adrenaline_controller": {
+      "initial_state": "holding",
+      "states": {
+        "holding": {
+          "animations": [
+            "adrenaline_holding"
+          ],
+          "transitions": [
+            {
+              "out_holding": "!q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:adrenaline')"
+            },
+            {
+              "adrenaline_using": "q.is_using_item && (q.health < q.max_health)"
+            },
+            {
+              "pushing": "q.property('l4d2:push') == 1"
+            }
+          ]
+        },
+        "out_holding": {
+          "on_entry": [
+            "v.has_item = 0;"
+          ],
+          "animations": [
+            "adrenaline_holding"
+          ],
+          "transitions": [
+            {
+              "holding": "1.0"
+            }
+          ]
+        },
+        "adrenaline_using": {
+          "animations": [
+            "adrenaline_using"
+          ],
+          "transitions": [
+            {
+              "holding": "q.any_animation_finished || !q.is_item_name_any('slot.weapon.mainhand', 0, 'l4d2:adrenaline')"
+            }
+          ]
+        },
+        "pushing": {
+          "animations": [
+            "adrenaline_pushing"
+          ],
+          "transitions": [
+            {
+              "holding": "q.all_animations_finished || q.property('l4d2:push') == 0"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

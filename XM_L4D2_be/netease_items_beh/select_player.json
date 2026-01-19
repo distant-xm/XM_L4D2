@@ -1,0 +1,15 @@
+{
+    "format_version": "1.10",
+    "minecraft:item": {
+        "description": {
+            "identifier": "xm_l4d2:select_player",
+            "category": "Nature"
+        },
+        "components": {
+            "minecraft:max_stack_size":1,
+            "netease:customtips": {
+                "value": "§8选择角色"
+            }
+        }
+    }
+}
