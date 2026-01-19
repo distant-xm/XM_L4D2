@@ -5,6 +5,11 @@
 ModName = "XM_L4D2"
 ModVersion = "0.0.1"
 
+
+
+
+
+
 # Server System
 ServerSystemName = "XMServerSystem"
 ServerSystemClsPath = "XM_L4D2.modServer.serverSystem.XMServerSystem.XMServerSystem"
