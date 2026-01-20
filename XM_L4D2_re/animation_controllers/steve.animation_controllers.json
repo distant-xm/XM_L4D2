@@ -78,9 +78,9 @@
 						}
 					},
 					"animations": [
-						{"idle_ram": "v.l4d2_item <= 0 && variable.idle_speed"},
+						{"idle_ram": "q.mod.l4d2_item <= 0 && variable.idle_speed"},
 						{"idle_leg": "variable.idle_speed"},
-						{"walk_arm": "v.l4d2_item <= 0 && variable.walk_speed"},
+						{"walk_arm": "q.mod.l4d2_item <= 0 && variable.walk_speed"},
 						{"walk_leg": "variable.walk_speed"}
 					],
 					"transitions": [
@@ -95,7 +95,7 @@
 				"jump": {
 					"animations": [
 						"jump_leg",
-						{"jump_arm": "v.l4d2_item <= 0"}
+						{"jump_arm": "q.mod.l4d2_item <= 0"}
 					],
 					"transitions": [
 						{"landing": "q.vertical_speed < -1"}
@@ -105,7 +105,7 @@
 				"jump_move": {
 					"animations": [
 						"jump_move_leg",
-						{"jump_move_arm": "v.l4d2_item <= 0"}
+						{"jump_move_arm": "q.mod.l4d2_item <= 0"}
 					],
 					"transitions": [
 						{"jump_remove": "q.is_on_ground || q.vertical_speed < -13"}
@@ -115,7 +115,7 @@
 				"jump_remove": {
 					"animations": [
 						"jump_remove_leg",
-						{"jump_remove_arm": "v.l4d2_item <= 0"}
+						{"jump_remove_arm": "q.mod.l4d2_item <= 0"}
 					],
 					"transitions": [
 						{"idle": "q.any_animation_finished"}
@@ -154,7 +154,7 @@
 				"run": {
 					"animations": [
 						"run_leg",
-						{"run_arm": "v.l4d2_item <= 0"}
+						{"run_arm": "q.mod.l4d2_item <= 0"}
 					],
 					"transitions": [
 						{"idle": "!q.is_sprinting"},
@@ -167,7 +167,7 @@
 				"sneak": {
 					"animations": [
 						"sneak_leg",
-						{"sneak_arm": "v.l4d2_item <= 0"}
+						{"sneak_arm": "q.mod.l4d2_item <= 0"}
 					],
 					"transitions": [
 						{"jump": "q.is_jumping"},

@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 # 从客户端API中拿到我们需要的ViewBinder / ViewRequest / ScreenNode
-from XM_L4D2.config import ModConfig as config
 import mod.client.extraClientApi as clientApi
 
 

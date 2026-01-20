@@ -16,7 +16,7 @@
               "shoot": "q.property('l4d2:o_ammo') > 0 && q.is_using_item"
             },
             {
-              "pushing": "q.property('l4d2:push') == 1"
+              "pushing": "q.mod.l4d2_attack == 5"
             }
           ]
         },
@@ -70,7 +70,7 @@
               "shoot_left": "q.property('l4d2:o_ammo') > 0 && q.is_using_item && v.two_pistol_shoot == 2"
             },
             {
-              "pushing": "q.property('l4d2:push') == 1"
+              "pushing": "q.mod.l4d2_attack == 5"
             }
           ]
         },
@@ -141,7 +141,7 @@
               "shoot": "q.property('l4d2:m_weapon_using')"
             },
             {
-              "pushing": "q.property('l4d2:push') == 1"
+              "pushing": "q.mod.l4d2_attack == 5"
             }
           ]
         },
@@ -188,16 +188,16 @@
           ],
           "transitions": [
             {
-              "attack_1": "q.property('l4d2:melee_weapon_attack') == 1"
+              "attack_1": "q.mod.l4d2_attack == 1"
             },
             {
-              "attack_2": "q.property('l4d2:melee_weapon_attack') == 2"
+              "attack_2": "q.mod.l4d2_attack == 2"
             },
             {
-              "attack_3": "q.property('l4d2:melee_weapon_attack') == 3"
+              "attack_3": "q.mod.l4d2_attack == 3"
             },
             {
-              "pushing": "q.property('l4d2:push') == 1"
+              "pushing": "q.mod.l4d2_attack == 5"
             }
           ]
         },
@@ -252,16 +252,16 @@
           ],
           "transitions": [
             {
-              "attack_1": "q.property('l4d2:melee_weapon_attack') == 1"
+              "attack_1": "q.mod.l4d2_attack == 1"
             },
             {
-              "attack_2": "q.property('l4d2:melee_weapon_attack') == 2"
+              "attack_2": "q.mod.l4d2_attack == 2"
             },
             {
-              "attack_3": "q.property('l4d2:melee_weapon_attack') == 3"
+              "attack_3": "q.mod.l4d2_attack == 3"
             },
             {
-              "pushing": "q.property('l4d2:push') == 1"
+              "pushing": "q.mod.l4d2_attack == 5"
             }
           ]
         },
@@ -316,16 +316,16 @@
           ],
           "transitions": [
             {
-              "attack_1": "q.property('l4d2:melee_weapon_attack') == 1"
+              "attack_1": "q.mod.l4d2_attack == 1"
             },
             {
-              "attack_2": "q.property('l4d2:melee_weapon_attack') == 2"
+              "attack_2": "q.mod.l4d2_attack == 2"
             },
             {
-              "attack_3": "q.property('l4d2:melee_weapon_attack') == 3"
+              "attack_3": "q.mod.l4d2_attack == 3"
             },
             {
-              "pushing": "q.property('l4d2:push') == 1"
+              "pushing": "q.mod.l4d2_attack == 5"
             }
           ]
         },
@@ -380,16 +380,16 @@
           ],
           "transitions": [
             {
-              "attack_1": "q.property('l4d2:melee_weapon_attack') == 1"
+              "attack_1": "q.mod.l4d2_attack == 1"
             },
             {
-              "attack_2": "q.property('l4d2:melee_weapon_attack') == 2"
+              "attack_2": "q.mod.l4d2_attack == 2"
             },
             {
-              "attack_3": "q.property('l4d2:melee_weapon_attack') == 3"
+              "attack_3": "q.mod.l4d2_attack == 3"
             },
             {
-              "pushing": "q.property('l4d2:push') == 1"
+              "pushing": "q.mod.l4d2_attack == 5"
             }
           ]
         },
@@ -444,16 +444,16 @@
           ],
           "transitions": [
             {
-              "attack_1": "q.property('l4d2:melee_weapon_attack') == 1"
+              "attack_1": "q.mod.l4d2_attack == 1"
             },
             {
-              "attack_2": "q.property('l4d2:melee_weapon_attack') == 2"
+              "attack_2": "q.mod.l4d2_attack == 2"
             },
             {
-              "attack_3": "q.property('l4d2:melee_weapon_attack') == 3"
+              "attack_3": "q.mod.l4d2_attack == 3"
             },
             {
-              "pushing": "q.property('l4d2:push') == 1"
+              "pushing": "q.mod.l4d2_attack == 5"
             }
           ]
         },
@@ -508,16 +508,16 @@
           ],
           "transitions": [
             {
-              "attack_1": "q.property('l4d2:melee_weapon_attack') == 1"
+              "attack_1": "q.mod.l4d2_attack == 1"
             },
             {
-              "attack_2": "q.property('l4d2:melee_weapon_attack') == 2"
+              "attack_2": "q.mod.l4d2_attack == 2"
             },
             {
-              "attack_3": "q.property('l4d2:melee_weapon_attack') == 3"
+              "attack_3": "q.mod.l4d2_attack == 3"
             },
             {
-              "pushing": "q.property('l4d2:push') == 1"
+              "pushing": "q.mod.l4d2_attack == 5"
             }
           ]
         },
@@ -572,16 +572,16 @@
           ],
           "transitions": [
             {
-              "attack_1": "q.property('l4d2:melee_weapon_attack') == 1"
+              "attack_1": "q.mod.l4d2_attack == 1"
             },
             {
-              "attack_2": "q.property('l4d2:melee_weapon_attack') == 2"
+              "attack_2": "q.mod.l4d2_attack == 2"
             },
             {
-              "attack_3": "q.property('l4d2:melee_weapon_attack') == 3"
+              "attack_3": "q.mod.l4d2_attack == 3"
             },
             {
-              "pushing": "q.property('l4d2:push') == 1"
+              "pushing": "q.mod.l4d2_attack == 5"
             }
           ]
         },
@@ -636,16 +636,16 @@
           ],
           "transitions": [
             {
-              "attack_1": "q.property('l4d2:melee_weapon_attack') == 1"
+              "attack_1": "q.mod.l4d2_attack == 1"
             },
             {
-              "attack_2": "q.property('l4d2:melee_weapon_attack') == 2"
+              "attack_2": "q.mod.l4d2_attack == 2"
             },
             {
-              "attack_3": "q.property('l4d2:melee_weapon_attack') == 3"
+              "attack_3": "q.mod.l4d2_attack == 3"
             },
             {
-              "pushing": "q.property('l4d2:push') == 1"
+              "pushing": "q.mod.l4d2_attack == 5"
             }
           ]
         },
@@ -700,16 +700,16 @@
           ],
           "transitions": [
             {
-              "attack_1": "q.property('l4d2:melee_weapon_attack') == 1"
+              "attack_1": "q.mod.l4d2_attack == 1"
             },
             {
-              "attack_2": "q.property('l4d2:melee_weapon_attack') == 2"
+              "attack_2": "q.mod.l4d2_attack == 2"
             },
             {
-              "attack_3": "q.property('l4d2:melee_weapon_attack') == 3"
+              "attack_3": "q.mod.l4d2_attack == 3"
             },
             {
-              "pushing": "q.property('l4d2:push') == 1"
+              "pushing": "q.mod.l4d2_attack == 5"
             }
           ]
         },
@@ -764,16 +764,16 @@
           ],
           "transitions": [
             {
-              "attack_1": "q.property('l4d2:melee_weapon_attack') == 1"
+              "attack_1": "q.mod.l4d2_attack == 1"
             },
             {
-              "attack_2": "q.property('l4d2:melee_weapon_attack') == 2"
+              "attack_2": "q.mod.l4d2_attack == 2"
             },
             {
-              "attack_3": "q.property('l4d2:melee_weapon_attack') == 3"
+              "attack_3": "q.mod.l4d2_attack == 3"
             },
             {
-              "pushing": "q.property('l4d2:push') == 1"
+              "pushing": "q.mod.l4d2_attack == 5"
             }
           ]
         },
@@ -828,16 +828,16 @@
           ],
           "transitions": [
             {
-              "attack_1": "q.property('l4d2:melee_weapon_attack') == 1"
+              "attack_1": "q.mod.l4d2_attack == 1"
             },
             {
-              "attack_2": "q.property('l4d2:melee_weapon_attack') == 2"
+              "attack_2": "q.mod.l4d2_attack == 2"
             },
             {
-              "attack_3": "q.property('l4d2:melee_weapon_attack') == 3"
+              "attack_3": "q.mod.l4d2_attack == 3"
             },
             {
-              "pushing": "q.property('l4d2:push') == 1"
+              "pushing": "q.mod.l4d2_attack == 5"
             }
           ]
         },
@@ -892,16 +892,16 @@
           ],
           "transitions": [
             {
-              "attack_1": "q.property('l4d2:melee_weapon_attack') == 1"
+              "attack_1": "q.mod.l4d2_attack == 1"
             },
             {
-              "attack_2": "q.property('l4d2:melee_weapon_attack') == 2"
+              "attack_2": "q.mod.l4d2_attack == 2"
             },
             {
-              "attack_3": "q.property('l4d2:melee_weapon_attack') == 3"
+              "attack_3": "q.mod.l4d2_attack == 3"
             },
             {
-              "pushing": "q.property('l4d2:push') == 1"
+              "pushing": "q.mod.l4d2_attack == 5"
             }
           ]
         },
@@ -956,16 +956,16 @@
           ],
           "transitions": [
             {
-              "attack_1": "q.property('l4d2:melee_weapon_attack') == 1"
+              "attack_1": "q.mod.l4d2_attack == 1"
             },
             {
-              "attack_2": "q.property('l4d2:melee_weapon_attack') == 2"
+              "attack_2": "q.mod.l4d2_attack == 2"
             },
             {
-              "attack_3": "q.property('l4d2:melee_weapon_attack') == 3"
+              "attack_3": "q.mod.l4d2_attack == 3"
             },
             {
-              "pushing": "q.property('l4d2:push') == 1"
+              "pushing": "q.mod.l4d2_attack == 5"
             }
           ]
         },
@@ -1037,7 +1037,7 @@
               "attack_1": "q.property('l4d2:chainsaw_cooldown') == 1"
             },
             {
-              "pushing": "q.property('l4d2:push') == 1"
+              "pushing": "q.mod.l4d2_attack == 5"
             }
           ]
         },
@@ -1107,16 +1107,16 @@
           ],
           "transitions": [
             {
-              "attack_1": "q.property('l4d2:melee_weapon_attack') == 1"
+              "attack_1": "q.mod.l4d2_attack == 1"
             },
             {
-              "attack_2": "q.property('l4d2:melee_weapon_attack') == 2"
+              "attack_2": "q.mod.l4d2_attack == 2"
             },
             {
-              "attack_3": "q.property('l4d2:melee_weapon_attack') == 3"
+              "attack_3": "q.mod.l4d2_attack == 3"
             },
             {
-              "pushing": "q.property('l4d2:push') == 1"
+              "pushing": "q.mod.l4d2_attack == 5"
             }
           ]
         },

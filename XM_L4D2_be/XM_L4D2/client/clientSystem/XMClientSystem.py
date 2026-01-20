@@ -1,6 +1,6 @@
 import mod.client.extraClientApi as clientApi
 import random  # 导入random模块
-from XM_L4D2.config import ModConfig
+from XM_L4D2.config import ModConfig as ModConfig
 from XM_L4D2.config.WeaponConfig import WeaponConfig
 from XM_L4D2.client.api.XM_L4D2_molang import XM_L4D2_molang
 
@@ -41,7 +41,6 @@ class XMClientSystem(ClientSystem):
     def OnUIInitFinished(self, args):
         clientApi.RegisterUI(ModConfig.ModName, ModConfig.XM_L4D2UIName, ModConfig.XM_L4D2UIPyClsPath,
                              ModConfig.XM_L4D2UIScreenDef)
-        # self.LoadL4d2Player(args)
 
         argsDict = self.CreateEventData()
         argsDict["playerId"] = playerId          # 玩家ID
@@ -81,8 +80,8 @@ class XMClientSystem(ClientSystem):
             if carriedData["newItemName"] in self.weapon_detail:
                 weapon_query_name = self.weapon_detail[carriedData["newItemName"]]["query_name"]
                 weapon_query_value = self.weapon_detail[carriedData["newItemName"]]["query_value"]
-                #shezhi
-                self.molang(playerId, weapon_query_name, weapon_query_value)
+                #设置molang变量
+                self.SetMolang.molang(playerId, weapon_query_name, weapon_query_value)
 
                 self.RenderL4d2Player({"playerId":playerId})
                 if self.uiNode == None:
@@ -90,11 +89,11 @@ class XMClientSystem(ClientSystem):
 
             else:
                 #shezhi
-                self.molang(playerId,"l4d2_item",0.0)
+                self.SetMolang.molang(playerId,"l4d2_item",0.0)
                 if self.uiNode != None:
                     self.uiNode.SetRemove()
         else:
-            self.molang(playerId,"l4d2_item",0.0)
+            self.SetMolang.molang(playerId,"l4d2_item",0.0)
             if self.uiNode != None:
                 self.uiNode.SetRemove()
 

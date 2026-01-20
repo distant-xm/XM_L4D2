@@ -1,0 +1,67 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.l4d2_item": {
+      "arrays": {
+        "geometries": {
+          "Array.l4d2_item_geometries": [
+            "Geometry.default",
+            "Geometry.offhand_weapon.baseball_bat",
+            "Geometry.offhand_weapon.chainsaw",
+            "Geometry.offhand_weapon.cricket_bat",
+            "Geometry.offhand_weapon.crowbar",
+            "Geometry.offhand_weapon.electric_guitar",
+            "Geometry.offhand_weapon.fireaxe",
+            "Geometry.offhand_weapon.frying_pan",
+            "Geometry.offhand_weapon.golf_club",
+            "Geometry.offhand_weapon.katana",
+            "Geometry.offhand_weapon.knife",
+            "Geometry.offhand_weapon.machete",
+            "Geometry.offhand_weapon.nightstick",
+            "Geometry.offhand_weapon.pitchfork",
+            "Geometry.offhand_weapon.riot_shield",
+            "Geometry.offhand_weapon.shovel"
+          ]
+        },
+        "textures": {
+          "Array.l4d2_item_textures": [
+            "Texture.default",
+            "Texture.offhand_weapon.baseball_bat",
+            "Texture.offhand_weapon.chainsaw",
+            "Texture.offhand_weapon.cricket_bat",
+            "Texture.offhand_weapon.crowbar",
+            "Texture.offhand_weapon.electric_guitar",
+            "Texture.offhand_weapon.fireaxe",
+            "Texture.offhand_weapon.frying_pan",
+            "Texture.offhand_weapon.golf_club",
+            "Texture.offhand_weapon.katana",
+            "Texture.offhand_weapon.knife",
+            "Texture.offhand_weapon.machete",
+            "Texture.offhand_weapon.nightstick",
+            "Texture.offhand_weapon.pitchfork",
+            "Texture.offhand_weapon.riot_shield",
+            "Texture.offhand_weapon.shovel"
+          ]
+        }
+      },
+      "geometry": "Array.l4d2_item_geometries[q.mod.l4d2_item]",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Array.l4d2_item_textures[q.mod.l4d2_item]" ],
+      "part_visibility": [
+        { "head": false },
+        { "body1": false },
+        { "body2": false },
+        { "leftarm1": false },
+        { "leftarm2": false },
+        { "rightarm1": false },
+        { "rightarm2": false },
+        { "leftleg1": false },
+        { "leftleg2": false },
+        { "rightleg1": false },
+        { "rightleg2": false }
+      ],
+      "is_hurt_color": {},
+      "on_fire_color": {}
+    }
+  }
+}

@@ -5,18 +5,22 @@
             {
                 "XM_L4D2_panel": {
                     "type": "panel",
+                    "offset": [
+                        104.0,
+                        32.0
+                    ],
                     "size": [
-                        100,
-                        100
+                        42.0,
+                        42.0
                     ],
                     "layer": 1,
                     "controls": [
                         {
                             "XM_L4D2_melee_attack_button@common.button": {
                                 "type": "button",
-                                "$control_alpha": 1.0,
-                                "$default_texture": "textures/netease/common/button/default",
-                                "$hover_texture": "textures/netease/common/button/hover",
+                                "$control_alpha": 0.7,
+                                "$default_texture": "textures/ui/attack",
+                                "$hover_texture": "textures/ui/attack_pressed",
                                 "$is_new_nine_slice": false,
                                 "$label_color": [
                                     1,
@@ -24,13 +28,13 @@
                                     1
                                 ],
                                 "$label_font_scale_factor": 1.0,
-                                "$label_font_size": "large",
+                                "$label_font_size": "normal",
                                 "$label_layer": 3,
                                 "$label_offset": [
                                     0,
                                     0
                                 ],
-                                "$label_text": "Button",
+                                "$label_text": "近战攻击",
                                 "$nine_slice_buttom": 0,
                                 "$nine_slice_left": 0,
                                 "$nine_slice_right": 0,
@@ -42,11 +46,11 @@
                                     0
                                 ],
                                 "$pressed_button_name": "%netease_editor_template_namespace.click",
-                                "$pressed_texture": "textures/netease/common/button/pressed",
+                                "$pressed_texture": "textures/ui/attack_pressed",
                                 "$texture_layer": 2,
                                 "size": [
-                                    100,
-                                    50
+                                    42.0,
+                                    42.0
                                 ],
                                 "button_mappings": [],
                                 "default_control": "default",
